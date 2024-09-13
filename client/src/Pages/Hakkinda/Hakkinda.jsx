@@ -2,7 +2,7 @@ import React from 'react'
 
 function Hakkinda() {
   return (
-    <div>Hakkinda</div>
+    <div className='min-h-screen'> Hakkinda</div>
   )
 }
 

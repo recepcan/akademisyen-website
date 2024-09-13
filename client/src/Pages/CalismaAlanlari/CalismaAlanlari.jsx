@@ -2,7 +2,7 @@ import React from 'react'
 
 function CalismaAlanlari() {
   return (
-    <div>CalismaAlanlari</div>
+    <div className='min-h-screen'>CalismaAlanlari</div>
   )
 }
 

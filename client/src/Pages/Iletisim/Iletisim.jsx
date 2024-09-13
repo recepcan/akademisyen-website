@@ -2,7 +2,7 @@ import React from 'react'
 
 function Iletisim() {
   return (
-    <div>Iletisim</div>
+    <div className='min-h-screen'>Iletisim</div>
   )
 }
 

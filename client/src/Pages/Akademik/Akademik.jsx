@@ -2,7 +2,7 @@ import React from 'react'
 
 function Akademik() {
   return (
-    <div>Akademik</div>
+    <div className='min-h-screen'>Akademik</div>
   )
 }
 

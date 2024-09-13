@@ -2,7 +2,7 @@ import React from 'react'
 
 function Galeri() {
   return (
-    <div>Galeri</div>
+    <div className='min-h-screen'>Galeri</div>
   )
 }
 
