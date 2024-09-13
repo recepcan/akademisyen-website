@@ -13,12 +13,15 @@ import Akademik from '../src/Pages/Akademik/Akademik'
 import Header from './Components/Header'
 import { useSelector } from 'react-redux'
 import ToggleMenu from './Components/ToggleMenu'
+import { PersistGate } from 'redux-persist/integration/react'
 
 function App() {
  const {menu}=useSelector(state=>state.header)
 
   return (
-    <BrowserRouter>
+ 
+    <div className='min-h-screen'>
+    <BrowserRouter >
     <Header/>
     {
       menu ? 
@@ -39,6 +42,7 @@ function App() {
  </Routes>}
    
     </BrowserRouter>
+    </div>
   )
 }
 
