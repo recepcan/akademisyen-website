@@ -78,7 +78,7 @@ function SideBar({adminMenu}) {
   // console.log(currentUser.isAdmin)
   return (
     <div className='w-full min-h-screen md:border-r
-         flex  flex-col justify-between bg-[#030620] space-y-5    shadow-lg shadow-gray-400'>
+         flex  flex-col justify-between bg-[#030620] space-y-5  dark:shadow-none  shadow-lg shadow-gray-400'>
 
 
       <div className='flex flex-col  relative pt-14'>
