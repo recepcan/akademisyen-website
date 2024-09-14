@@ -15,6 +15,7 @@ import { useSelector } from 'react-redux'
 import ToggleMenu from './Components/ToggleMenu'
 import { PersistGate } from 'redux-persist/integration/react'
 import Footer from './Components/Footer'
+import AdminPage from './Pages/Admin/AdminPage'
 
 function App() {
  const {menu}=useSelector(state=>state.header)
@@ -37,6 +38,8 @@ function App() {
  <Route path='/Akademik' element={<Akademik/>}/>
  <Route path='/iletisim' element={<Iletisim/>}/>
  <Route path='/galeri' element={<Galeri/>}/>
+ 
+ <Route path='/admin' element={<AdminPage/>}/>
  
  <Route path='/' element={<Anasayfa/>}/>
  

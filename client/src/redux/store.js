@@ -3,10 +3,14 @@ import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import headerEventsSlice from './headerEventsSlice';
 import userAuthSlice from './userAuthSlice';
+import postsSlice from './postsSlice';
+import textsSlice from './textsSlice';
 
 const rootReducer = combineReducers({
   header: headerEventsSlice,
-  user:userAuthSlice
+  user:userAuthSlice,
+  posts:postsSlice,
+  texts:textsSlice
 });
 
 const persistConfig = {
