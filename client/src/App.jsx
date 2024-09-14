@@ -16,6 +16,11 @@ import ToggleMenu from './Components/ToggleMenu'
 import { PersistGate } from 'redux-persist/integration/react'
 import Footer from './Components/Footer'
 import AdminPage from './Pages/Admin/AdminPage'
+import CreatePost from './Pages/Admin/CreatePost'
+import UpdatePost from './Pages/Admin/UpdatePost'
+import UpdateText from './Pages/Admin/UpdateText'
+import CreateText from './Pages/Admin/CreateText'
+import PrivateRoute from './Components/PrivateRoute'
 
 function App() {
  const {menu}=useSelector(state=>state.header)
@@ -39,7 +44,13 @@ function App() {
  <Route path='/iletisim' element={<Iletisim/>}/>
  <Route path='/galeri' element={<Galeri/>}/>
  
- <Route path='/admin' element={<AdminPage/>}/>
+ <Route element={<PrivateRoute />}>
+                <Route path='/admin' element={<AdminPage />} />
+                <Route path='/create-post' element={<CreatePost />} />
+                <Route path='/update-post/:postId' element={<UpdatePost />} />
+                <Route path='/update-text/:textId' element={<UpdateText/>} />
+                <Route path='/create-text' element={<CreateText />} />
+              </Route>
  
  <Route path='/' element={<Anasayfa/>}/>
  

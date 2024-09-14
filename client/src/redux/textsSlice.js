@@ -10,7 +10,7 @@ const initialState = {
 };
 
 export const fetchTexts = createAsyncThunk('fetchTexts', async (currentUser) => {
-    const response = await fetch(`https://my-personal-blog-onvercel-api.vercel.app/api/text/getTexts?userId=${currentUser._id}`);
+    const response = await fetch(`/api/text/getTexts?userId=${currentUser._id}`);
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
@@ -22,7 +22,7 @@ export const fetchTexts = createAsyncThunk('fetchTexts', async (currentUser) => 
 
 
 export const fetchTextById = createAsyncThunk('fetchTextById', async (textId) => {
-  const response = await fetch(`https://my-personal-blog-onvercel-api.vercel.app/api/text/getTexts?textId=${textId}`);
+  const response = await fetch(`/api/text/getTexts?textId=${textId}`);
   if (!response.ok) {
       throw new Error('Network response was not ok');
   }

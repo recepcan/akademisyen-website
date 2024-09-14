@@ -9,7 +9,7 @@ const initialState = {
 };
 
 export const fetchPosts = createAsyncThunk('fetchPosts', async (currentUser) => {
-    const response = await fetch(`https://my-personal-blog-onvercel-api.vercel.app/api/post/getposts?userId=${currentUser._id}&limit=50`);
+    const response = await fetch(`/api/post/getposts?userId=${currentUser._id}&limit=50`);
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
@@ -20,7 +20,7 @@ export const fetchPosts = createAsyncThunk('fetchPosts', async (currentUser) => 
   
 
  export  const fetchPost6 = createAsyncThunk('fetchPost6',async(limit) => {
-    const res = await fetch(`https://my-personal-blog-onvercel-api.vercel.app/api/post/getPosts?limit=${limit}`);
+    const res = await fetch(`/api/post/getPosts?limit=${limit}`);
     if (!res.ok) {
       throw new Error('Network response was not ok');
     }
