@@ -67,7 +67,7 @@ export default function DashPosts() {
         // );
       }
     } catch (error) {
-      toast.error(error.message);
+      toast.error(error)
     }
   };
  
@@ -76,20 +76,20 @@ export default function DashPosts() {
       {currentUser.isAdmin && data.posts.length > 0 ? (
         <div className='flex   border-red-500 flex-col max-md:min-w-[800px]  md:w-full'>
           <div className='shadow-md flex-1   border-red-500'>
-            <div className='flex justify-evenly bg-gray-300 rounded-tl-lg rounded-tr-lg'>
-              <div className='p-5 w-1/6 hover:bg-gray-500 hover:text-white 
-              transition-all  flex items-center justify-center font-extrabold rounded-tl-lg '>
+            <div className='flex justify-evenly  rounded-tl-lg rounded-tr-lg'>
+              <div className='p-5 w-1/6 bg-gray-500 text-white 
+              transition-all  flex items-center justify-center font-extrabold rounded-tl-sm '>
                 Date updated
               </div>
-              <div className='p-5 w-1/6 hover:bg-gray-500 hover:text-white
+              <div className='p-5 w-1/6 bg-gray-500 text-white
                transition-all  flex items-center justify-center font-extrabold  '>
                 Post image
               </div>
-              <div className='p-5 w-1/6 hover:bg-gray-500 hover:text-white
+              <div className='p-5 w-1/6 bg-gray-500 text-white
                transition-all  flex items-center justify-center font-extrabold  '>
                 Post title
               </div>
-              <div className='p-5 w-1/6 hover:bg-gray-500 hover:text-white
+              <div className='p-5 w-1/6 bg-gray-500 text-white
                transition-all  flex items-center justify-center font-extrabold  '>
                 Category
               </div>
@@ -98,13 +98,13 @@ export default function DashPosts() {
                 Delete
               </div>
               <div className='p-5 w-1/6 bg-sky-700 flex  text-white
-               hover:bg-sky-400 transition-all items-center justify-center font-extrabold rounded-tr-lg '>
+               hover:bg-sky-400 transition-all items-center justify-center font-extrabold rounded-tr-sm '>
                 <span>Edit</span>
               </div>
             </div>
             {data?.posts?.map((post,index) => (
               <div key={index} className=''>
-                <div className='bg-white items-center border-b  border-gray-300 grid grid-cols-6 h-32 justify-center dark:border-gray-700 dark:bg-gray-800 '>
+                <div className='bg-white dark:bg-[#1a2e44] dark:text-white items-center border-b  border-gray-300 grid grid-cols-6 h-32 justify-center dark:border-gray-700  '>
                   <div className=' h-24  border-black flex items-center justify-center'>
                     {new Date(post.updatedAt).toLocaleDateString()}
                   </div>

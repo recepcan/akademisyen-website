@@ -14,6 +14,7 @@ import AdminTextsComponent from './AdminTextsComponent';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { IoCloseSharp } from 'react-icons/io5';
 import SideBar from './SideBar';
+import {Button} from 'flowbite-react'
 
 
 
@@ -39,30 +40,32 @@ function AdminPage() {
     
       return (
         <div className='min-h-screen w-full  box-border 
-         border-yellow-400 relative bg-gray-100 flex   '>
+         border-yellow-400 relative  flex   '>
          
     
         {
          
           <div 
-          className={`${adminMenu? 'lg:w-1/5 max-md:flex-1' : 'w-14 '} transition-all duration-200  border-gray-400  min-h-screen `}>
+          className={`${adminMenu? 'lg:w-1/5 max-md:flex-1' : 'w-14 '} transition-all duration-200  border-[#374151]  min-h-screen `}>
           <SideBar adminMenu={adminMenu} />
           </div>
         }
     
     
           <div className={`md:flex-1 ${adminMenu && "max-md:hidden" } w-full 
-            min-h-full box-border p-2 max-h-screen overflow-y-auto  dark:bg-[#030620] border-black`} >
+            min-h-full box-border p-2 max-h-screen overflow-y-auto   border-black`} >
           
           <div className='w-full uppercase flex items-center justify-around  p-3 bg-[#1a2e44]  text-white
-           rounded-sm mb-5 shadow-md shadow-gray-400'>
+           rounded-sm mb-5 dark:shadow-none shadow-md shadow-gray-400'>
           <h1>Edit {tab} Page</h1>
           {
             tab==="posts" && 
             <Link to={'/create-post'} className=' flex flex-col'>
-            <button className='md:w-72 w-full p-4 rounded-lg  text-white font-extrabold bg-gradient-to-tr from-pink-500 via-purple-500 to-sky-500  '>
+            <Button 
+            gradientDuoTone="purpleToBlue" outline
+            className='md:w-72 w-full  font-extrabold   '>
               Create Post
-            </button>
+            </Button>
           </Link>
           }
           </div>
