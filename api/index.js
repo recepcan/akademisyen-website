@@ -4,7 +4,8 @@ import dotenv from 'dotenv'
 import authRoutes from './Routes/authRoutes.js'
 import cors from 'cors'
 import cookieParser from 'cookie-parser';
-
+import postsRoutes from './Routes/postsRoutes.js'
+import textsRoutes from './Routes/textsRoutes.js'
 const app =express();
 
 dotenv.config();
@@ -26,6 +27,8 @@ app.use(cors({
     credentials: true, // Eğer yetkilendirme cookies kullanıyorsanız
   }));
 app.use('/api/auth', authRoutes)
+app.use('/api/post', postsRoutes)
+app.use('/api/text', textsRoutes)
 
 app.use((err, req, res, next) => {
     const statusCode = err.statusCode || 500;

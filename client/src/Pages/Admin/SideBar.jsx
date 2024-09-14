@@ -130,10 +130,10 @@ function SideBar({adminMenu}) {
         }
         <Link to={'/'} className='  '>
           <h6 className={`flex ${adminMenu? 'text-md':'hidden'} `}>
-          {currentUser.email}
+          {currentUser?.email}
           </h6>
         </Link>
-        <img src={currentUser.profilePicture} className='w-8 h-8 object-cover rounded-full ' />
+        <img src={currentUser?.profilePicture} className='w-8 h-8 object-cover rounded-full ' />
       </div>
 
     </div>

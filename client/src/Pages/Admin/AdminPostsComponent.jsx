@@ -24,7 +24,7 @@ export default function DashPosts() {
       dispatch(fetchPosts(currentUser));
 
     }
-    if (data.posts.length < 6) {
+    if (data?.posts?.length < 6) {
                  setShowMore(false);
                }
   }, [dispatch, currentUser]);
@@ -49,7 +49,7 @@ export default function DashPosts() {
     setShowModal(false);
     try {
       const res = await fetch(
-        `https://my-personal-blog-onvercel-api.vercel.app/api/post/deletepost/${postIdToDelete}/${currentUser._id}`,
+        `/api/post/deletepost/${postIdToDelete}/${currentUser._id}`,
         {
           method: 'DELETE',
         }
