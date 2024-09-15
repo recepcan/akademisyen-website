@@ -94,7 +94,12 @@ function CreatePost() {
 
             <form className='flex flex-col gap-4 space-y-5' onSubmit={handleSubmit}>
 
-                <input onChange={(e)=>setFormData({...formData,title:e.target.value})} type="text" placeholder='Title' required id='title' 
+                <input 
+                onChange={(e)=>setFormData({...formData,title:e.target.value})} 
+                type="text"
+                 placeholder='Title'
+                  required 
+                  id='title' 
                 className='flex-1 p-2 dark:bg-gray-900 border border-black dark:border-white rounded-lg  font-bold outline-1' />
                 <div className='border-4 gap-4 flex lg:flex-row flex-col justify-between items-center border-teal-500 border-dotted p-3 '>
                     <input onChange={(e)=>setFile(e.target.files[0])} 
@@ -118,11 +123,21 @@ function CreatePost() {
                     </div>
                     {
                         formData.image && (
-                            <div className='w-full  flex items-center justify-center bg-sky-100'>
+                            <div className='w-full  flex items-center justify-center bg-sky-200'>
                             <img src={formData.image} alt='upload' className='w-full h-72 object-contain'/>
                       
                             </div>  )
                     }
+
+                   
+                    <textarea 
+                    onChange={(e)=>setFormData({...formData,explanation:e.target.value})}
+                     type="text" 
+                     placeholder='explanation' 
+                     required 
+                     id='explanation' 
+                className='flex-1 w-full p-2 dark:bg-gray-900 border border-black dark:border-white rounded-lg  font-bold outline-1' />
+                    
                <div className='  border-red-500 lg:h-80 h-72'>
                <ReactQuill 
                theme='snow'

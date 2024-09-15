@@ -10,6 +10,11 @@ const postSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    explanation: {
+      type: String,
+      required: true,
+    },
+
     title: {
       type: String,
       required: true,

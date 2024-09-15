@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 import Layout from './Layout/Layout'
 
 function App() {
-
+ 
   return (
 
     <div className='min-h-screen'>
