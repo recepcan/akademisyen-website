@@ -6,6 +6,7 @@ import cors from 'cors'
 import cookieParser from 'cookie-parser';
 import postsRoutes from './Routes/postsRoutes.js'
 import textsRoutes from './Routes/textsRoutes.js'
+import userRoutes from './Routes/userRoutes.js'
 import path from 'path'
 const app =express();
 
@@ -30,7 +31,7 @@ app.use(cors({
 app.use('/api/auth', authRoutes)
 app.use('/api/post', postsRoutes)
 app.use('/api/text', textsRoutes)
-
+app.use('/api/user', userRoutes);
 const __dirname = path.resolve();
 
 

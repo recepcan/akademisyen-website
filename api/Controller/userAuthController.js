@@ -50,11 +50,8 @@ export const signIn = async (req, res, next) => {
       return next(errorHandler(400, 'Invalid password'));
     }
     const token = jwt.sign(
-      {
-         id: validUser._id, 
-         isAdmin: validUser.isAdmin },
-      process.env.JWT_SECRET,
-      {expiresIn:'1d'}
+      { id: validUser._id, isAdmin: validUser.isAdmin },
+      process.env.JWT_SECRET
     );
 
     const { password: pass, ...rest } = validUser._doc;
@@ -62,14 +59,9 @@ export const signIn = async (req, res, next) => {
     res
       .status(200)
       .cookie('access_token', token, {
-       httpOnly: true, // Ensures cookie can't be accessed via JavaScript
-        secure: process.env.NODE_ENV === 'production', // Ensures cookie is sent over HTTPS in production
-        sameSite: 'none', // Allows cross-site cookies
-        expires: new Date(Date.now() + 24 * 60 * 60 * 1000), // Cookie expiration
-     
+        httpOnly: true,
       })
-      .json(rest)
-      
+      .json(rest);
   } catch (error) {
     next(error);
   }
