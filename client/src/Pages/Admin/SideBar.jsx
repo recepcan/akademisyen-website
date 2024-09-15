@@ -91,7 +91,7 @@ function SideBar({adminMenu}) {
       <div className='flex flex-col  relative pt-14'>
       <div
       onClick={()=>dispatch(setadminMenu())} 
-      className=' text-white flex  items-center justify-center rounded-lg text-4xl w-10 h-10 absolute top-2 right-2 '>
+      className=' text-white cursor-pointer flex  items-center justify-center rounded-lg text-4xl w-10 h-10 absolute top-2 right-2 '>
       {
         adminMenu  ? 
        <IoCloseSharp />
@@ -129,7 +129,7 @@ function SideBar({adminMenu}) {
 
       </div>
 
-      <div className={`flex ${adminMenu? 'flex-row':'flex-col space-y-3'} items-center justify-between text-white   p-2 shadow-sm shadow-gray-400`}>
+      <div className={`flex ${adminMenu? 'flex-row':'flex-col space-y-3'} items-center justify-between text-white   p-2 `}>
         {location.pathname == '/admin' &&
           <button onClick={handleSignout} className='  text-white  bg-red-500  font-semibold p-1 rounded-full'>
             <AiFillLeftCircle className='text-3xl ' />
