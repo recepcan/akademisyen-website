@@ -43,6 +43,7 @@ function CreatePost() {
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
           setImageUploadProgress(progress.toFixed(0));
         },
+        
         (error) => {
           toast.error('Image upload failed');
           setImageUploadProgress(null);
