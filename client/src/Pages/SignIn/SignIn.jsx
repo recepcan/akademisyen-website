@@ -33,12 +33,14 @@ function SignIn() {
           const data = await res.json()
           if (data.success === false) {
               dispatch(signInFailure(data.message))
+              toast.error(data.message)
           }
 
           if (res.ok) {
 
               dispatch(signInSuccess(data))
-              navigate('/')
+              navigate('/admin')
+              toast.success('Hoşgeldiniz')
           }
       } catch (error) {
           dispatch(signInFailure(error))
