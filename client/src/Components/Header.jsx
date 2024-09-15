@@ -73,6 +73,11 @@ function Header() {
       to: "/iletisim",
       icon: null,
     },
+    {
+      id:"admin",
+      name:"admin",
+      to:"/admin",
+    }
   ];
 
   return (
