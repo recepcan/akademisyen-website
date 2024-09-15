@@ -36,7 +36,7 @@ if(res.ok){
         flex md:flex-row flex-col items-center justify-center'>
 
 
-        <div className="md:w-1/3 w-full  md:h-[600px] p-3 md:p-10 bg-gray-100 dark:bg-gray-900 dark:text-white
+        <div className="md:w-1/3 w-full  md:h-[600px] p-3 md:p-10  
         flex  flex-col items-center justify-center ">
             <div className='flex  items-center justify-start'>
                 <h1 className='bg-gradient-to-br from-green-300 via-teal-500 to-green-900 
@@ -44,7 +44,7 @@ if(res.ok){
                 Yunus Altundağ
                </h1>
             </div>
-            <h2 className='p-5  text-lg font-bold font-inter'>
+            <h2 className='p-5   text-lg font-bold font-inter'>
            Bu sayfaya yalnızca site sahibi erişebilir.
             </h2>
 
@@ -60,7 +60,7 @@ if(res.ok){
                             your username
                             <input id='username' 
                             onChange={handleChange}
-                             className='p-3  border-2 rounded-lg  outline-none w-full' 
+                             className='p-3 bg-transparent  border-2 rounded-lg  outline-none w-full' 
                              type="text" 
                              placeholder='username' />
                         </div>
@@ -70,7 +70,7 @@ if(res.ok){
                             <input 
                             id='email' 
                             onChange={handleChange} 
-                            className='p-3  border-2 rounded-lg dark:bg-gray-900  outline-none w-full'
+                            className='p-3  border-2 rounded-lg bg-transparent  outline-none w-full'
                              type="email" 
                              placeholder='email' />
                         </div>
@@ -81,7 +81,7 @@ if(res.ok){
                             <input 
                             id='password' 
                             onChange={handleChange} 
-                            className='p-3  border-2 rounded-lg  dark:bg-gray-900 outline-none w-full'
+                            className='p-3  border-2 rounded-lg  bg-transparent outline-none w-full'
                              type="password" 
                              placeholder='password' />
                         </div>

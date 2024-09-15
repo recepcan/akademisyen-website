@@ -13,12 +13,15 @@ import { FaPhoneFlip } from 'react-icons/fa6';
 import { FaInfoCircle, FaMoon } from 'react-icons/fa';
 import { BiSolidSun } from 'react-icons/bi';
 import {toggleTheme} from '../../redux/headerEventsSlice'
+import { BsPersonCircle } from "react-icons/bs";
+
 function SideBar({adminMenu}) {
   const location = useLocation();
   const dispatch = useDispatch();
   const { currentUser } = useSelector((state) => state.user);
   const { theme } = useSelector((state) => state.header);
   const [tab, setTab] = useState('');
+  
    const handleSignout = async () => {
     try {
       const res = await fetch('/api/auth/sign-out', {
@@ -69,6 +72,10 @@ function SideBar({adminMenu}) {
     {
       title: "posts",
       icon: <MdCreateNewFolder />
+    },
+    {
+      title:"profile",
+      icon:<BsPersonCircle />
     }
 
   ];
@@ -133,7 +140,9 @@ function SideBar({adminMenu}) {
           {currentUser?.email}
           </h6>
         </Link>
-        <img src={currentUser?.profilePicture} className='w-8 h-8 object-cover rounded-full ' />
+      {/* <Link  to={`/admin?tab=profile`}>
+       <img src={currentUser?.profilePicture} className='w-8 h-8 object-cover rounded-full ' />
+       </Link> */}
       </div>
 
     </div>

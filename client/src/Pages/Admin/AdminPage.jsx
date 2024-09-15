@@ -15,6 +15,7 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import { IoCloseSharp } from 'react-icons/io5';
 import SideBar from './SideBar';
 import {Button} from 'flowbite-react'
+import Profile from './Profile';
 
 
 
@@ -79,6 +80,7 @@ function AdminPage() {
     
           {tab==='posts' &&  (<AdminPostsComponent />)} 
           {tab===`texts` &&  (<AdminTextsComponent />)} 
+          {tab===`profile` &&  (<Profile />)} 
           </div>
         </div>
       )
