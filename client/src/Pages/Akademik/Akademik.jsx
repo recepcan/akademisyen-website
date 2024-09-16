@@ -10,7 +10,7 @@ function Akademik() {
       <h1 className="text-3xl font-bold p-5">Publications</h1>
       <div
         className="bg-white dark:bg-gray-900 dark:shadow-none w-[90%] rounded-2xl 
-        min-h-screen flex py-5 px-20 shadow-lg shadow-gray-500  space-x-5"
+        min-h-screen flex py-5 px-10 shadow-lg shadow-gray-500  space-x-10 border"
       >
         <div className="w-1/3 flex flex-col items-center  ">
           <h2 className='text-xl font-semibold py-10 '>Bilimsel Yayın ve Makaleler</h2>

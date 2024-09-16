@@ -63,7 +63,7 @@ function GetPublications({ category }) {
             </span>
           </h2>
 
-          <p className='font-bold leading-6 text-[#666] dark:text-gray-300'>
+          <p className='font- leading-6 lowercase text-[#666] dark:text-gray-300'>
             {pub.content}
             {pub.dergi && (
               <span className='text-xs dark:text-gray-300 font-thin'>
