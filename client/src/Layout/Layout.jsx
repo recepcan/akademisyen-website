@@ -22,7 +22,7 @@ import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useLocation } from 'react-router-dom'
 import {Route,Routes} from 'react-router-dom'
-import {CreatePublication} from '../Pages/Admin/CreatePublication'
+import CreatePublication from '../Pages/Admin/CreatePublication'
 function Layout() {
 
     const { menu } = useSelector(state => state.header)
