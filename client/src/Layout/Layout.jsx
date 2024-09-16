@@ -22,7 +22,6 @@ import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useLocation } from 'react-router-dom'
 import {Route,Routes} from 'react-router-dom'
-import CreatePublication from '../Pages/Admin/createPublication'
 
 function Layout() {
 
@@ -55,7 +54,7 @@ function Layout() {
             <Route path='/create-text' element={<CreateText />} />
             <Route path='/update-text/:textId' element={<UpdateText />} />
 
-            <Route path='/create-publication' element={<CreatePublication/>}/>
+            
             
           </Route>
 
