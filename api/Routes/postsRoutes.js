@@ -5,7 +5,7 @@ import { verifyAdmin } from '../utils/verifyAdmin.js';
 
 const router = express.Router();
 
-router.post('/create', [verifyToken,verifyAdmin], create)
+router.post('/create', create)
 router.get('/getposts', getposts)
 router.delete('/deletepost/:postId/:userId', [verifyToken,verifyAdmin], deletepost)
 router.patch('/updatepost/:postId/:userId', [verifyToken,verifyAdmin], updatepost)

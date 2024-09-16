@@ -7,7 +7,9 @@ import cookieParser from 'cookie-parser';
 import postsRoutes from './Routes/postsRoutes.js'
 import textsRoutes from './Routes/textsRoutes.js'
 import userRoutes from './Routes/userRoutes.js'
+import publicationRoutes from './Routes/publicationRoutes.js'
 import path from 'path'
+
 const app =express();
 
 dotenv.config();
@@ -28,10 +30,13 @@ app.use(cors({
     origin: 'http://localhost:5173', // Frontend'in çalıştığı port
     credentials: true, // Eğer yetkilendirme cookies kullanıyorsanız
   }));
+  
 app.use('/api/auth', authRoutes)
 app.use('/api/post', postsRoutes)
 app.use('/api/text', textsRoutes)
 app.use('/api/user', userRoutes);
+app.use('/api/publication',publicationRoutes)
+
 const __dirname = path.resolve();
 
 

@@ -27,7 +27,7 @@ function Blog() {
     data.posts ?
       data?.posts?.map((post, i) => (
         <Link className='last: ' to={`/post/${post.slug}`} key={i}>
-          <div className='w-[320px]   h-[400px]  group relative transition-all hover:scale-105 
+          <div className='w-[320px]   h-[400px] dark:shadow-none shadow-lg shadow-gray-400  group relative transition-all hover:scale-105 
           flex flex-col items-center space-y-5 rounded-lg dark:bg-gray-900 bg-white
             dark:border border-white'>
             <img className='w-full h-52  md:group-hover:h-[300px] group-hover:rounded-lg duration-700 rounded-t-lg object-cover  transition-all border-b ' src={post.image} alt={post.title} />

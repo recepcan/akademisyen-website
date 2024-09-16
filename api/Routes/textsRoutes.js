@@ -3,6 +3,7 @@ import  { create,  getTextById,  getTexts, updateText,  } from '../Controller/te
 import { verifyAdmin } from '../utils/verifyAdmin.js';
 import { verifyToken } from '../utils/verifyToken.js';
 const router = express.Router();
+
 router.post('/create/',[verifyToken,verifyAdmin],create)
 router.get('/getTexts', getTexts);
 // router.get('/texts/:textId', getTextById);

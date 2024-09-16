@@ -8,7 +8,7 @@ import { TiHome } from "react-icons/ti";
 import { FcAbout } from "react-icons/fc";
 import { MdContentPaste, MdCreateNewFolder } from "react-icons/md";
 import { PiPhoneDisconnectThin } from "react-icons/pi";
-import { IoCloseSharp, IoDocumentText } from "react-icons/io5";
+import { IoCloseSharp, IoDocumentText, IoDocumentTextSharp } from "react-icons/io5";
 import { FaPhoneFlip } from 'react-icons/fa6';
 import { FaInfoCircle, FaMoon } from 'react-icons/fa';
 import { BiSolidSun } from 'react-icons/bi';
@@ -76,6 +76,10 @@ function SideBar({adminMenu}) {
     {
       title:"profile",
       icon:<BsPersonCircle />
+    },
+    {
+      title:"publications",
+      icon:<IoDocumentTextSharp />
     }
 
   ];
