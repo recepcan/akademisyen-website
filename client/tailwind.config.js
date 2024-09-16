@@ -7,7 +7,11 @@ export default {
     flowbite.content(),
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        titillium: ['"Titillium Web"', 'Helvetica', 'Arial', 'sans-serif'],
+      },
+    },
   },
   plugins: [ flowbite.plugin(),],
 }
