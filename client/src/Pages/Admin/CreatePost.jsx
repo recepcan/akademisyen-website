@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import {FileInput,Button} from 'flowbite-react'
 import {
   getDownloadURL,
   getStorage,
@@ -101,23 +102,29 @@ function CreatePost() {
                   required 
                   id='title' 
                 className='flex-1 p-2 dark:bg-gray-900 border border-black dark:border-white rounded-lg  font-bold outline-1' />
-                <div className='border-4 gap-4 flex lg:flex-row flex-col justify-between items-center border-teal-500 border-dotted p-3 '>
-                    <input onChange={(e)=>setFile(e.target.files[0])} 
-                    type="file"
-                     accept='image/*'
-                      className='bg-gradient-to-tr p-2 rounded-lg
-                     text-white font-bold bg-gradient from-pink-600 via-purple-500 to-blue-500' />
-
-                    <button type='button' 
-                    onClick={handleUpdloadImage} 
-                    disabled={imageUploadProgress} 
-                    className='bg-gradient-to-tr p-2 rounded-lg text-white font-bold bg-gradient from-pink-600 via-purple-500 to-blue-500'> {
-                        imageUploadProgress? (
-                            <div className='w-16 h-16'> 
-                            <CircularProgressbar value={imageUploadProgress} text={`${imageUploadProgress || 0}%`}/>
-                            </div>
+                <div className='flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3'>
+          <FileInput
+            type='file'
+            accept='image/*'
+            onChange={(e) => setFile(e.target.files[0])}
+          />
+          <Button
+            type='button'
+            gradientDuoTone='purpleToBlue'
+            size='sm'
+            outline
+            onClick={handleUpdloadImage}
+            disabled={imageUploadProgress}
+          >
+            {imageUploadProgress ? (
+              <div className='w-16 h-16'>
+                <CircularProgressbar
+                  value={imageUploadProgress}
+                  text={`${imageUploadProgress || 0}%`}
+                />
+              </div>
                         ):("upload")
-                    }</button>
+                    }</Button>
             
                 
                     </div>
@@ -149,12 +156,14 @@ function CreatePost() {
                    }
                }/>
                </div>
-                <button 
-                 type='submit '
-                 className=' p-4 rounded-lg text-white font-bold
-                  bg-gradient-to-tr from-pink-600 via-purple-500 to-blue-500'>
-                 Publish
-                 </button>
+               <Button
+               type='submit'
+               gradientDuoTone='greenToBlue'
+               size='xl'
+               outline
+               >
+               Publish 
+               </Button>
             </form>
             
         </div>
