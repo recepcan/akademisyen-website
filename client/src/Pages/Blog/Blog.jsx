@@ -20,7 +20,8 @@ function Blog() {
   return (
     <div className='w-full flex flex-col min-h-screen  justify-center items-center'>
     <h1 className='text-5xl font-extrabold font-mono p-5 rounded-lg uppercase '>Blog</h1>
-   <div className='grid   justify-items-center items-center sm:grid-cols-1  lg:grid-cols-2 xl:grid-cols-3  2xl:grid-cols-4 w-[75%] flex-wrap py-20  gap-y-5'>
+   <div className='grid border border-red-400  justify-items-center items-center 
+   sm:grid-cols-1  lg:grid-cols-2 xl:grid-cols-3  2xl:grid-cols-4 md:w-[75%]  flex-wrap py-20  gap-y-5'>
    
    {
     data.posts ?
