@@ -6,9 +6,13 @@ export const create = async (req, res, next) => {
   if (!req.user && !req.user.isAdmin) {
     return next(errorHandler(403, 'You are not allowed to create a post'));
   }
-  if (!req.body.content || !req.body.authors) {
-    return next(errorHandler(400, 'Please provide all required fields'));
-  }
+  // if (!req.body.content || !req.body.authors) {
+  //   return next(errorHandler(400, 'Please provide all required fields'));
+  // }
+  
+  if (!req.body.content ) {
+       return next(errorHandler(400, 'Please provide all required fields'));
+    }
 
   const newPublication = new Publication({
     ...req.body,

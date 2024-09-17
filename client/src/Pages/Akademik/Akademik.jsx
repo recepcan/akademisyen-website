@@ -9,7 +9,7 @@ function Akademik() {
     <div className="min-h-screen flex flex-col items-center py-5">
       <h1 className="text-3xl font-bold p-5">Publications</h1>
       <div
-        className="bg-white dark:bg-gray-900 dark:shadow-none w-[90%] rounded-2xl 
+        className="bg-white dark:bg-gray-900 dark:shadow-none w-[95%] rounded-2xl 
         min-h-screen flex flex-col md:flex-row py-5 px-10 shadow-lg shadow-gray-500 
          max-md:space-y-5 md:space-x-10 border md:justify-center"
       >

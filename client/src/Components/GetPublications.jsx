@@ -53,35 +53,17 @@ function GetPublications({ category }) {
 
   return (
     <div>
-    <ul className='space-y-3'>
+    <ul className='space-y-3 p-5'>
       {publications.map((pub) => (
-        <li key={pub._id} className='list-disc tracking-wider leading-6'>
-          <h2 className='font-bold text-xs leading-6'>
-            {pub.authors}
-            <span className='text-xs'>
-            (  {pub.tarih ? formatYear(pub.tarih) : 'No Date'} )
-            </span>
-          </h2>
+        <li key={pub._id} className='list-disc  '>
+          
+        <div 
+        className='p-3 font-titillium text-xs  flex-wrap  w-full post-content overflow-hidden' 
+        dangerouslySetInnerHTML={{__html:pub&&pub.content}}>
+   
+        </div>
 
-          <p className='font- leading-6 lowercase text-[#666] dark:text-gray-300'>
-            {pub.content}
-            {pub.dergi && (
-              <span className='text-xs dark:text-gray-300 font-thin'>
-                {pub.dergi}
-              </span>
-            )}
-          </p>
-
-          {pub.link && (
-            <a
-              className='text-sm text-sky-700 dark:text-sky-400 hover:underline'
-              href={pub.link}
-            >
-              {pub.link}
-            </a>
-          )}
-
-          <br />
+         
         </li>
       ))}
     </ul>
@@ -90,3 +72,33 @@ function GetPublications({ category }) {
 }
 
 export default GetPublications;
+
+
+// <li key={pub._id} className='list-disc tracking-wider leading-6'>
+//           <h2 className='font-bold text-xs leading-6'>
+//             {pub.authors}
+//             <span className='text-xs'>
+//             (  {pub.tarih ? formatYear(pub.tarih) : 'No Date'} )
+//             </span>
+//           </h2>
+
+//           <p className='font-thin text-xs leading-6 lowercase  '>
+//             {pub.content}
+//             {pub.dergi && (
+//               <span className='text-xs font-thin'>
+//                 {pub.dergi}
+//               </span>
+//             )}
+//           </p>
+
+//           {pub.link && (
+//             <a
+//               className='text-sm text-sky-700 dark:text-sky-400 hover:underline'
+//               href={pub.link}
+//             >
+//               {pub.link}
+//             </a>
+//           )}
+
+//           <br />
+//         </li>
