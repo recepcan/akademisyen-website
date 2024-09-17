@@ -5,12 +5,14 @@ import headerEventsSlice from './headerEventsSlice';
 import userAuthSlice from './userAuthSlice';
 import postsSlice from './postsSlice';
 import textsSlice from './textsSlice';
+import publicationSlice from './publicationSlice';
 
 const rootReducer = combineReducers({
   header: headerEventsSlice,
   user:userAuthSlice,
   posts:postsSlice,
-  texts:textsSlice
+  texts:textsSlice,
+  publications:publicationSlice
 });
 
 const persistConfig = {

@@ -58,7 +58,7 @@ function GetPublications({ category }) {
         <li key={pub._id} className='list-disc  '>
           
         <div 
-        className='p-3 font-titillium text-xs  flex-wrap  w-full post-content overflow-hidden' 
+        className='p-3 font-titillium text-xs dark:bg-transparent dark:text-white flex-wrap  w-full post-content overflow-hidden' 
         dangerouslySetInnerHTML={{__html:pub&&pub.content}}>
    
         </div>

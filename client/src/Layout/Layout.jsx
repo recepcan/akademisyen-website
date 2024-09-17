@@ -23,6 +23,7 @@ import { useSelector } from 'react-redux'
 import { useLocation } from 'react-router-dom'
 import {Route,Routes} from 'react-router-dom'
 import CreatePublication from '../Pages/Admin/CreatePublication'
+import UpdatePublication from '../Pages/Admin/UpdatePublication'
 function Layout() {
 
     const { menu } = useSelector(state => state.header)
@@ -55,6 +56,7 @@ function Layout() {
             <Route path='/update-text/:textId' element={<UpdateText />} />
 
             <Route path='/create-publication' element={<CreatePublication />}/>
+            <Route path='/update-publication/:publicationId' element={<UpdatePublication />}/>
             
           </Route>
 
