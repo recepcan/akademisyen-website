@@ -64,6 +64,14 @@ function ToggleMenu() {
             icon: null
 
 
+        },
+        {
+            id: 'admin',
+            name: 'admin',
+            to: '/admin',
+            icon: null
+
+
         }
 
     ]

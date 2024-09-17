@@ -59,7 +59,7 @@ function GetPublications({ category }) {
           <h2 className='font-bold text-xs leading-6'>
             {pub.authors}
             <span className='text-xs'>
-              {pub.tarih ? formatYear(pub.tarih) : 'No Date'}
+            (  {pub.tarih ? formatYear(pub.tarih) : 'No Date'} )
             </span>
           </h2>
 

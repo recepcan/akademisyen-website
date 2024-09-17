@@ -25,17 +25,17 @@ function Footer() {
           <h1 className='text-2xl font-bold font-inter'>Bilgi</h1>
           <div className='dark:text-gray-400'>
             <button className=' flex items-center justify-center  text-lg p-2   w-[300px] text-gray-500 hover:underline dark:hover:text-white     rounded-lg  hover:scale-110 transition-all '>
-              Site Tasarlama
+             Lorem, ipsum dolor.
             </button>
 
             <button className='flex items-center justify-center  text-lg p-2  w-[300px] text-gray-500 hover:underline dark:hover:text-white    rounded-lg  hover:scale-110 transition-all'>
-              Site Yayınlama
+            Lorem, ipsum dolor.
             </button>
             <button className='flex items-center justify-center  text-lg p-2  w-[300px]  text-gray-500 hover:underline dark:hover:text-white    rounded-lg  hover:scale-110 transition-all'>
-              Alan Adı Transferi
+            Lorem, ipsum dolor.
             </button>
             <button className='flex items-center justify-center  text-lg p-2  w-[300px]  text-gray-500 hover:underline dark:hover:text-white    rounded-lg  hover:scale-110 transition-all'>
-              Güvenlik
+            Lorem, ipsum dolor.
             </button>
           </div>
 
@@ -46,16 +46,16 @@ dark:text-white text-lg border-white'>
           <h1 className='text-2xl font-bold font-inter'>Hizmetler</h1>
           <div className='dark:text-gray-400 '>
             <button className=' flex items-center justify-center  text-lg p-2   w-[300px]  text-gray-500 hover:underline dark:hover:text-white    rounded-lg  hover:scale-110 transition-all '>
-              Web Tasarım
+            Lorem, ipsum dolor.
             </button>
             <button className='flex items-center justify-center  text-lg p-2  w-[300px]    text-gray-500 hover:underline dark:hover:text-white  rounded-lg  hover:scale-110 transition-all'>
-              Web Programlama
+            Lorem, ipsum dolor.
             </button>
             <button className='flex items-center justify-center  text-lg p-2  w-[300px]  text-gray-500 hover:underline dark:hover:text-white   rounded-lg  hover:scale-110 transition-all'>
-              Hosting
+            Lorem, ipsum dolor.
             </button>
             <button className='flex items-center justify-center  text-lg p-2  w-[300px]  text-gray-500 hover:underline dark:hover:text-white    rounded-lg  hover:scale-110 transition-all'>
-              Domain-Alan Adı
+            Lorem, ipsum dolor.
             </button>
           </div>
 

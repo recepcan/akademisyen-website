@@ -30,7 +30,7 @@ function Blog() {
           <div className='w-[320px]   h-[400px] dark:shadow-none shadow-lg shadow-gray-400  group relative transition-all hover:scale-105 
           flex flex-col items-center space-y-5 rounded-lg dark:bg-gray-900 bg-white
             dark:border border-white'>
-            <img className='w-full h-52  md:group-hover:h-[300px] group-hover:rounded-lg duration-700 rounded-t-lg object-cover  transition-all border-b ' src={post.image} alt={post.title} />
+            <img className='w-full h-52   group-hover:rounded-lg duration-700 rounded-t-lg object-cover  transition-all border-b ' src={post.image} alt={post.title} />
             <div className='text-xl line-clamp-1 font-bold p-1 backdrop-blur-sm rounded-lg  dark:bg-white/20 bg-sky-500/20  '>
             {post.title}
             </div>

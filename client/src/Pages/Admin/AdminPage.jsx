@@ -69,6 +69,17 @@ function AdminPage() {
             </Button>
           </Link>
           }
+          {
+            tab==="publications" && 
+            <Link to={'/create-publication'} className=' flex flex-col'>
+            <Button 
+            gradientDuoTone="purpleToBlue" outline
+            className='md:w-72 w-full  font-extrabold   '>
+              Create Publications
+            </Button>
+          </Link>
+          }
+
           </div>
         {/*  {tab==='home' &&  (<AdminHomeComponent/>)}
           {tab==='' &&  (<AdminHomeComponent/>)} 

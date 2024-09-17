@@ -14,6 +14,7 @@ import { FaInfoCircle, FaMoon } from 'react-icons/fa';
 import { BiSolidSun } from 'react-icons/bi';
 import {toggleTheme} from '../../redux/headerEventsSlice'
 import { BsPersonCircle } from "react-icons/bs";
+import { GrTextWrap } from "react-icons/gr";
 
 function SideBar({adminMenu}) {
   const location = useLocation();
@@ -62,7 +63,8 @@ function SideBar({adminMenu}) {
 
     {
       title: "texts",
-      icon: <IoDocumentText />
+      icon: <GrTextWrap />
+
     },
     {
       title: "contact",
@@ -74,13 +76,14 @@ function SideBar({adminMenu}) {
       icon: <MdCreateNewFolder />
     },
     {
-      title:"profile",
-      icon:<BsPersonCircle />
-    },
-    {
       title:"publications",
       icon:<IoDocumentTextSharp />
     }
+    ,
+    {
+      title:"profile",
+      icon:<BsPersonCircle />
+    },
 
   ];
 
