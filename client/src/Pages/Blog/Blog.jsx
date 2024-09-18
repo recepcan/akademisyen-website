@@ -31,14 +31,16 @@ function Blog() {
           flex flex-col items-center space-y-5 rounded-lg dark:bg-gray-900 bg-white
             dark:border border-white'>
             <img className='w-full h-52   group-hover:rounded-lg duration-700 rounded-t-lg object-cover  transition-all border-b ' src={post.image} alt={post.title} />
-            <div className='text-xl line-clamp-1 font-bold p-1 backdrop-blur-sm rounded-lg  dark:bg-white/20 bg-sky-500/20  '>
-            {post.title}
-            </div>
-            <div 
-             className='p-1 max-w-2xl line-clamp-3 mx-auto w-full post-content ' >
-              {post.explanation}
+           <div className='p-2'>
+           <div className='text-xl line-clamp-1 font-bold p-1 backdrop-blur-sm rounded-lg  dark:bg-white/20 bg-sky-500/20  '>
+           {post.title}
+           </div>
+           <div 
+            className='p-1 max-w-2xl line-clamp-3 mx-auto w-full post-content ' >
+             {post.explanation}
 
-            </div>
+           </div>
+           </div>
             <div className='p-1 backdrop-blur-sm rounded-lg  dark:bg-white/20 bg-sky-500/20 absolute text-xs right-1 bottom-1'>
               {post.category}
             </div>
