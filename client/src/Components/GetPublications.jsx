@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-
+import Loading from './Loading'
 
 function GetPublications({ category }) {
   const { currentUser } = useSelector((state) => state.user);
@@ -48,7 +48,7 @@ function GetPublications({ category }) {
     return date.getFullYear();
   };
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loading/>
   if (error) return <p>Error: {error}</p>;
 
   return (
@@ -58,7 +58,7 @@ function GetPublications({ category }) {
         <li key={pub._id} className='list-disc  '>
           
         <div 
-        className='p-3 font-titillium text-xs dark:bg-transparent dark:text-white flex-wrap  w-full post-content overflow-hidden' 
+        className='p-3 font-titillium text-sm md:text-xs dark:bg-transparent dark:text-white flex-wrap  w-full post-content overflow-hidden' 
         dangerouslySetInnerHTML={{__html:pub&&pub.content}}>
    
         </div>

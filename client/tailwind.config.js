@@ -12,6 +12,10 @@ export default {
         titillium: ['"Titillium Web"', 'Helvetica', 'Arial', 'sans-serif'],
       },
     },
+    animation: {
+      'spin-slow': 'spin 1s linear infinite',
+    }
+
   },
   plugins: [ flowbite.plugin(),],
 }

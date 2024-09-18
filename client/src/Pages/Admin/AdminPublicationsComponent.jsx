@@ -6,6 +6,7 @@ import { HiOutlineExclamationCircle } from 'react-icons/hi';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { FaCaretDown } from "react-icons/fa";
 import {toast }from 'react-toastify'
+import Loading from '../../Components/Loading';
 function AdminPublicationsComponent() {
 
     const dispatch = useDispatch();
@@ -41,13 +42,11 @@ function AdminPublicationsComponent() {
           if (!res.ok) {
             toast.error(data.message);
           } else {
-            if (currentUser && currentUser._id) {
-              dispatch(fetchPublications({currentUser,category}));
+            
+              dispatch(fetchPublications({category}));
   
-          }
-            // setUserPosts((prev) =>
-            //   prev.filter((post) => post._id !== postIdToDelete)
-            // );
+         
+           
           }
         } catch (error) {
           toast.error(error)
@@ -57,7 +56,8 @@ const changeCategory=(e)=>{
     setCategory(e.target.value)
     console.log(category)
 }
-
+if(loading) return <Loading/>
+if(error) return <div>Error: {error}</div>
     return (
         <div className='flex-1  border-black   overflow-hidden overflow-x-auto'>
         

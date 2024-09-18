@@ -5,6 +5,7 @@ import { HiOutlineExclamationCircle } from 'react-icons/hi';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { toast } from 'react-toastify';
 import { fetchPosts } from '../../redux/postsSlice';
+import Loading from '../../Components/Loading'
 // import { set } from 'mongoose';
 
 export default function DashPosts() {
@@ -20,19 +21,18 @@ export default function DashPosts() {
  
 
   useEffect(() => {
-    if (currentUser && currentUser._id) {
-      dispatch(fetchPosts(currentUser));
+   
+      dispatch(fetchPosts());
 
-    }
     if (data?.posts?.length < 6) {
                  setShowMore(false);
                }
-  }, [dispatch, currentUser]);
+  }, [dispatch]);
 
   console.log('Component data:', data); 
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loading/>
   }
 
   if (error) {
@@ -55,16 +55,11 @@ export default function DashPosts() {
         }
       );
       const data = await res.json();
+      
       if (!res.ok) {
         toast.error(data.message);
-      } else {
-        if (currentUser && currentUser._id) {
-          dispatch(fetchPosts(currentUser));
-    
-        }
-        // setUserPosts((prev) =>
-        //   prev.filter((post) => post._id !== postIdToDelete)
-        // );
+      } else {       
+          dispatch(fetchPosts());
       }
     } catch (error) {
       toast.error(error)
