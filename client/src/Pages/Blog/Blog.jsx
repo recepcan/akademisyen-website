@@ -11,12 +11,12 @@ function Blog() {
 
 
   useEffect(() => {
-    if (currentUser && currentUser._id) {
-      dispatch(fetchPosts(currentUser));
+    
+      dispatch(fetchPosts());
 
-    }
    
-  }, [dispatch, currentUser]);
+   
+  }, [dispatch]);
   return (
     <div className='w-full flex flex-col min-h-screen  justify-center items-center'>
     <h1 className='text-5xl font-extrabold font-mono p-5 rounded-lg uppercase '>Blog</h1>

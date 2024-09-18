@@ -8,8 +8,8 @@ const initialState = {
     limit:false
 };
 
-export const fetchPosts = createAsyncThunk('fetchPosts', async (currentUser) => {
-    const response = await fetch(`/api/post/getposts?userId=${currentUser._id}&limit=50`);
+export const fetchPosts = createAsyncThunk('fetchPosts', async () => {
+    const response = await fetch(`/api/post/getposts?limit=50`);
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }

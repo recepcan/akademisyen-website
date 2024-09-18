@@ -10,7 +10,7 @@ function GetPublications({ category }) {
 
   const fetchPublications = async () => {
     try {
-      const response = await fetch(`/api/publication/getPublications?userId=${currentUser._id}&category=${category}`, 
+      const response = await fetch(`/api/publication/getPublications?category=${category}`, 
         {
         method: 'GET',
         headers: {
@@ -41,7 +41,7 @@ function GetPublications({ category }) {
 
   useEffect(() => {
     fetchPublications();
-  }, [category, currentUser._id]);
+  }, [category]);
 
   const formatYear = (dateString) => {
     const date = new Date(dateString);
