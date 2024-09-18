@@ -24,6 +24,7 @@ import { useLocation } from 'react-router-dom'
 import {Route,Routes} from 'react-router-dom'
 import CreatePublication from '../Pages/Admin/CreatePublication'
 import UpdatePublication from '../Pages/Admin/UpdatePublication'
+import PostPage from '../Pages/PostPage/PostPage'
 function Layout() {
 
     const { menu } = useSelector(state => state.header)
@@ -45,6 +46,8 @@ function Layout() {
           <Route path='/Akademik' element={<Akademik />} />
           <Route path='/iletisim' element={<Iletisim />} />
           <Route path='/galeri' element={<Galeri />} />
+
+          <Route path='/post/:postSlug' element={<PostPage />} />
 
           <Route element={<PrivateRoute />}>
             <Route path='/admin' element={<AdminPage />} />

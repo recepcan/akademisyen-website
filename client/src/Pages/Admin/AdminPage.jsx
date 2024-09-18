@@ -57,7 +57,7 @@ function AdminPage() {
           <div className={`md:flex-1 ${adminMenu && "max-md:hidden" } w-full 
             min-h-full box-border p-2 max-h-screen overflow-y-auto   border-black`} >
           
-          <div className='w-full uppercase flex items-center justify-around  p-3 text-2xl  
+          <div className='w-full  uppercase flex items-center justify-around  p-3 text-2xl  
            rounded-sm mb-5 '>
           <h1>Edit {tab} Page</h1>
           {
