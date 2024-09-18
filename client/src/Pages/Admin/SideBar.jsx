@@ -92,13 +92,13 @@ function SideBar({adminMenu}) {
   // console.log(currentUser.isAdmin)
   return (
     <div className='w-full min-h-screen md:border-r-2 border-[#374151]
-         flex  flex-col justify-between bg-[#030620] space-y-5  dark:shadow-none  shadow-lg shadow-gray-400'>
+         flex  flex-col justify-between bg-transparent   space-y-5  dark:shadow-none  shadow-lg shadow-gray-400'>
 
 
       <div className='flex flex-col  relative pt-14'>
       <div
       onClick={()=>dispatch(setadminMenu())} 
-      className=' text-white cursor-pointer flex  items-center justify-center rounded-lg text-4xl w-10 h-10 absolute top-2 right-2 '>
+      className='   cursor-pointer flex  items-center justify-center rounded-lg text-4xl w-10 h-10 absolute top-2 right-2 '>
       {
         adminMenu  ? 
        <IoCloseSharp />
@@ -109,8 +109,8 @@ function SideBar({adminMenu}) {
 
         {
           tabs.map((item, index) => (
-            <Link key={index} className={`${tab === item.title && 'text-white font-extrabold'} w-full
-               rounded-none p-4 space-x-5  shadow-sm   md:hover:bg-[#38445e] text-gray-400
+            <Link key={index} className={`${tab === item.title && 'dark:text-white  bg-sky-700 dark:bg-sky-500 text-white  font-extrabold'} w-full
+               rounded-none p-4 space-x-5  shadow-sm   md:hover:bg-sky-900 md:hover:text-white text-gray-900 dark:text-gray-400
                  flex items-center justify-start  text-xl font-extrabold`}
               to={`/admin?tab=${item.title}`}>
               <div className='text-2xl'>{item.icon}</div>
@@ -122,7 +122,7 @@ function SideBar({adminMenu}) {
         }
         <button
         className='  w-full
-               rounded-none p-4 space-x-5     md:hover:bg-[#38445e] text-gray-400
+               rounded-none p-4 space-x-5     md:hover:bg-sky-900 md:hover:text-white text-gray-900 dark:text-gray-400
                  flex items-center justify-start text-xl font-extrabold'
         onClick={() => dispatch(toggleTheme())} >
         
@@ -136,7 +136,7 @@ function SideBar({adminMenu}) {
 
       </div>
 
-      <div className={`flex ${adminMenu? 'flex-row':'flex-col space-y-3'} items-center justify-between text-white   p-2 `}>
+      <div className={`flex ${adminMenu? 'flex-row':'flex-col space-y-3'} items-center justify-between text-gray-900 dark:text-gray-400   p-2 `}>
         {location.pathname == '/admin' &&
           <button onClick={handleSignout} className='  text-white  bg-red-500  font-semibold p-1 rounded-full'>
             <AiFillLeftCircle className='text-3xl ' />
