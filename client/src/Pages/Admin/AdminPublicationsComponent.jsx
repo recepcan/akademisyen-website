@@ -108,7 +108,7 @@ const changeCategory=(e)=>{
                         </div>
                     </div>
                     <div className=' h-24   border-black flex items-center justify-center col-span-1'>
-                      <Link to={`/post/${pub.slug}`}>
+                      <Link to={`/publication/${pub.slug}`}>
                       <h2>{new Date(pub.tarih).toLocaleDateString()}</h2>
                       </Link>
                     </div>
@@ -141,11 +141,9 @@ const changeCategory=(e)=>{
             
           </div>
         
-        {!currentUser.isAdmin || !data.publications.length > 0 && ( 
-        
+          {(!currentUser.isAdmin || !(data?.publications?.length > 0)) && ( 
             <div>
-            <h1>{category} kategorisinde gösterilecek hiçbir şey bulunamadı, lütfen başka bir kategori seçin!</h1>
-            
+                <h1>{category} kategorisinde gösterilecek hiçbir şey bulunamadı, lütfen başka bir kategori seçin!</h1>
             </div>
         )}
 
@@ -184,61 +182,3 @@ const changeCategory=(e)=>{
 
 export default AdminPublicationsComponent
 
-//  showMore && (
-//               <button
-//                 onClick={handleShowMore}
-//                 className='w-1/3 text-white font-semibold mt-2
-//                 font-mono self-center text-2xl p-4 rounded-xl bg-cyan-700 '
-//               >
-//                 Show more
-//               </button>
-           
-// <>
-// {
-//     currentUser?.isAdmin && data?.publications ? (
-//         <div className='w-full border-2'>
-//             {
-//                 data.publications.map((pub, index) => (
-//                     <div className='border border-black w-full grid grid-cols-5'
-//                         key={index}>
-
-
-//                         <div
-//                             className='p-3 col-span-2  font-titillium text-xs dark:bg-transparent dark:text-white flex-wrap   post-content overflow-hidden'
-//                             dangerouslySetInnerHTML={{ __html: pub && pub.content }}>
-
-//                         </div>
-
-
-//                         <div className='col-span-1'>
-//                             <h2>{pub.category}</h2>
-//                             <h2>sitede yayınlanma tarihi : {new Date(pub.createdAt).toLocaleDateString()}</h2>
-//                             <h2>sitede güncellenme tarihi : {new Date(pub.updatedAt).toLocaleDateString()}</h2>
-//                             <h2>Araştırma Tarihi : {new Date(pub.tarih).toLocaleDateString()}</h2>
-                        
-//                         </div>
-
-//                         <div className='col-span-1 flex'>
-                        
-//                         <button className='w-full h-full bg-sky-600 cursor-pointer'>Edit</button>
-                        
-//                         </div>
-//                         <div className='col-span-1 flex'>
-                        
-                        
-                        
-//                         </div>
-//                     </div>
-
-//                 ))
-//             }
-//         </div>
-//     ) :
-//         (
-//             <div>
-//                 you have no publication
-//             </div>
-//         )
-// }
-
-// </>
