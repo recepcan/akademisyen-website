@@ -72,22 +72,19 @@ export default function DashPosts() {
         <div className='flex   border-red-500 flex-col max-md:min-w-[800px]  md:w-full'>
           <div className='shadow-md flex-1   border-red-500'>
             <div className='flex justify-evenly  rounded-tl-lg rounded-tr-lg'>
-              <div className='p-5 w-1/6 bg-gray-500 text-white 
+              <div className='p-5 w-2/6 bg-gray-500 text-white 
               transition-all  flex items-center justify-center font-extrabold rounded-tl-sm '>
-                Date updated
+               Post Explanation
               </div>
               <div className='p-5 w-1/6 bg-gray-500 text-white
                transition-all  flex items-center justify-center font-extrabold  '>
-                Post image
+                Post image & Date 
               </div>
               <div className='p-5 w-1/6 bg-gray-500 text-white
                transition-all  flex items-center justify-center font-extrabold  '>
                 Post title
               </div>
-              <div className='p-5 w-1/6 bg-gray-500 text-white
-               transition-all  flex items-center justify-center font-extrabold  '>
-                Category
-              </div>
+              
               <div className='p-5 w-1/6 bg-red-700 flex text-white
                hover:bg-red-500  transition-all items-center justify-center font-extrabold'>
                 Delete
@@ -99,29 +96,36 @@ export default function DashPosts() {
             </div>
             {data?.posts?.map((post,index) => (
               <div key={index} className=''>
-                <div className='bg-white dark:bg-[#1a2e44] dark:text-white items-center border-b  border-gray-300 grid grid-cols-6 h-32 justify-center dark:border-gray-700  '>
-                  <div className=' h-24  border-black flex items-center justify-center'>
-                    {new Date(post.updatedAt).toLocaleDateString()}
+                <div className='bg-white dark:bg-[#1a2e44] dark:text-white items-center border-b  border-gray-300 
+                grid grid-cols-6 h-32 justify-center dark:border-gray-700  '>
+                  <div className=' h-24  p-1  border-black  col-span-2 flex items-center justify-center text-center'>
+                  <Link
+                  className='font-medium text-gray-900 dark:text-white line-clamp-3 overflow-hidden  border-black'
+                  to={`/post/${post.slug}`}
+                >
+                {post.explanation}
+                </Link>
+                   
                   </div>
-                  <div className=' h-24   border-black flex items-center justify-center'>
+                  <div className=' h-24   border-black flex items-center justify-center  col-span-1'>
                     <Link to={`/post/${post.slug}`}>
                       <img
                         src={post.image}
                         alt={post.title}
-                        className='w-20 h-24   border-black object-cover bg-gray-500'
+                        className='w-20 h-24   border-black object-cover bg-gray-500 '
                       />
+                      {new Date(post.updatedAt).toLocaleDateString()}
                     </Link>
                   </div>
-                  <div className='h-24   border-black flex items-center justify-center'>
+                  <div className='h-24   border-black flex items-center justify-center col-span-1'>
                     <Link
-                      className='font-medium text-gray-900 dark:text-white line-clamp-1 md:line-clamp-2 overflow-hidden  border-black'
+                      className='font-medium text-gray-900 text-center dark:text-white line-clamp-3 overflow-hidden  border-black'
                       to={`/post/${post.slug}`}
                     >
                       {post.title}
                     </Link>
                   </div>
-                  <div className='h-24   border-black flex items-center justify-center'>{post.category}</div>
-                  <div className='h-24   border-black flex items-center justify-center'>
+                  <div className='h-24   border-black flex items-center justify-center col-span-1'>
                     <span
                       onClick={() => {
                         setShowModal(true);
@@ -132,7 +136,7 @@ export default function DashPosts() {
                       Delete
                     </span>
                   </div>
-                  <div className='h-24   border-black flex items-center justify-center'>
+                  <div className='h-24   border-black flex items-center justify-center col-span-1'>
                     <Link
                       className='text-teal-500 hover:underline'
                       to={`/update-post/${post._id}`}

@@ -77,7 +77,7 @@ if(error) return <div>Error: {error}</div>
                 <select
                 value={category}
                 onChange={changeCategory}
-                className=" p-5 w-1/6 bg-white 
+                className=" p-5 w-1/6 bg-white text-black
                 transition-all  flex items-center justify-center font-extrabold    border border-gray-300  focus:outline-none focus:ring-indigo-500 focus:border-black sm:text-sm appearance-none"
  
                 >
@@ -102,7 +102,7 @@ if(error) return <div>Error: {error}</div>
                   <div className='bg-white dark:bg-[#1a2e44] dark:text-white items-center border-b  border-gray-300 grid grid-cols-6 h-32 justify-center dark:border-gray-700  '>
                     <div className=' h-24  border-black flex items-center justify-center col-span-2 '>
                         <div
-                            className='p-3 col-span-2  font-titillium text-xs dark:bg-transparent dark:text-white flex-wrap   post-content overflow-hidden'
+                            className='p-3 col-span-2 overflow-hidden font-titillium text-xs dark:bg-transparent dark:text-white flex-wrap   post-content '
                             dangerouslySetInnerHTML={{ __html: pub && pub.content }}>
 
                         </div>
