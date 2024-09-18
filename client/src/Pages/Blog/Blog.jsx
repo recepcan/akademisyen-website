@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import {useDispatch,useSelector} from 'react-redux'
 import { fetchPosts } from '../../redux/postsSlice';
 import { Link } from 'react-router-dom';
@@ -8,15 +8,13 @@ function Blog() {
   const dispatch = useDispatch();
   const { data, loading, error } = useSelector(state => state.posts);
   const { currentUser } = useSelector((state) => state.user);
-
+  
 
   useEffect(() => {
-    
-      dispatch(fetchPosts());
-
-   
-   
+    // Her dataLength değiştiğinde veriyi yeniden çek
+    dispatch(fetchPosts());
   }, [dispatch]);
+  
   return (
     <div className='w-full flex flex-col min-h-screen  justify-center items-center'>
     <h1 className='text-5xl font-extrabold font-mono p-5 rounded-lg uppercase '>Blog</h1>

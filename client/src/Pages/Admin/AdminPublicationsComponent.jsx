@@ -17,12 +17,12 @@ function AdminPublicationsComponent() {
     const [category, setCategory] = useState('makale');
 
     useEffect(() => {
-        if (currentUser && currentUser._id) {
-            dispatch(fetchPublications({currentUser,category}));
+      
+            dispatch(fetchPublications({category}));
 
-        }
+        
 
-    }, [dispatch, currentUser,category]);
+    }, [dispatch,category]);
 
     console.log('Component data:', data);
 

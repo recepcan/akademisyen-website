@@ -19,7 +19,7 @@ const initialState = {
 //   });
   
   export const fetchPublications = createAsyncThunk('publications/fetchPublications', async ({ currentUser, category }) => {
-    const response = await fetch(`/api/publication/getPublications?userId=${currentUser._id}&category=${category}`);
+    const response = await fetch(`/api/publication/getPublications?category=${category}`);
     if (!response.ok) {
       throw new Error('Failed to fetch publications');
     }
