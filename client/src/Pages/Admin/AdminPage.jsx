@@ -80,6 +80,16 @@ function AdminPage() {
             </Button>
           </Link>
           }
+          {
+            tab==="texts" && 
+            <Link to={'/create-text'} className=' flex flex-col'>
+            <Button 
+            gradientDuoTone="purpleToBlue" outline
+            className='md:w-72 w-full  font-extrabold   '>
+              Create Text
+            </Button>
+          </Link>
+          }
 
           </div>
         {/*  {tab==='home' &&  (<AdminHomeComponent/>)}

@@ -61,8 +61,8 @@ function PostPage() {
                 />
 
                 <div className="flex justify-between p-3 border-b-2 border-blue-600 dark:border-white mx-auto w-full max-w-2xl text-xs">
-                    <span>{post && new Date(post.createdAt).toLocaleDateString()}</span>
-                    <span className="italic">{post && (post.content.length / 1000).toFixed(0)} mins read</span>
+                    <span>Yayınlama Tarihi: {post && new Date(post.createdAt).toLocaleDateString()}</span>
+                    <span className="italic">Güncelleme Tarihi: {post && new Date(post.updatedAt).toLocaleDateString()}</span>
                 </div>
             </div>
         </div>
