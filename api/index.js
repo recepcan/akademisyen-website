@@ -8,6 +8,7 @@ import postsRoutes from './Routes/postsRoutes.js'
 import textsRoutes from './Routes/textsRoutes.js'
 import userRoutes from './Routes/userRoutes.js'
 import publicationRoutes from './Routes/publicationRoutes.js'
+import servicesRoutes from './Routes/servicesRoutes.js'
 import path from 'path'
 
 const app =express();
@@ -36,6 +37,7 @@ app.use('/api/post', postsRoutes)
 app.use('/api/text', textsRoutes)
 app.use('/api/user', userRoutes);
 app.use('/api/publication',publicationRoutes)
+app.use('/api/service',servicesRoutes)
 
 const __dirname = path.resolve();
 
