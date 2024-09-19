@@ -3,8 +3,9 @@ import { FaReact, FaInstagram, FaLinkedin, FaWhatsapp, FaGithub } from 'react-ic
 import { Link } from 'react-router-dom'
 function Footer() {
   return (
-    <div className='w-full   bg-white bottom-0 right-0 left-0 dark:shadow-none 
-         border-blue-500  text-black flex flex-col  max-lg:space-y-8  justify-center text-center items-center
+    <div className='w-full   bg-white bottom-0 right-0 left-0 dark:shadow-none  border-red-500 
+           text-black flex flex-col  max-md:space-y-8
+           justify-center text-center items-center
         dark:text-white dark:bg-black transition-colors duration-300 dark:z-50 flex-1'>
       <div className='flex items-center justify-center flex-col w-full space-y-5  bg-transparent bg-gradient-to-b from-sky-100 to-white dark:from-[#030620] dark:to-black'>
         <Link to="/">
@@ -18,9 +19,9 @@ function Footer() {
         <hr className='w-[90%] border-black  dark:border-sky-400 ' />
       </div>
 
-      <div className='w-full flex flex-col md:flex-row items-center justify-center p-4'>
+      <div className='w-full flex flex-wrap  2xl:w-[1536px] flex-row items-center justify-around p-4  border-black'>
 
-        <div className='  max-lg:w-full flex-wrap flex flex-col items-center justify-center 
+        <div className='py-8 border-2    flex-wrap flex flex-col items-center justify-center 
     dark:text-white text-lg border-white'>
           <h1 className='text-2xl font-bold font-inter'>Bilgi</h1>
           <div className='dark:text-gray-400'>
@@ -41,7 +42,7 @@ function Footer() {
 
         </div>
 
-        <div className='  max-lg:w-full flex-wrap flex flex-col items-center justify-center 
+        <div className='py-8 border-2    flex-wrap flex flex-col items-center justify-center 
 dark:text-white text-lg border-white'>
           <h1 className='text-2xl font-bold font-inter'>Hizmetler</h1>
           <div className='dark:text-gray-400 '>
@@ -61,7 +62,7 @@ dark:text-white text-lg border-white'>
 
         </div>
 
-        <div className='  max-lg:w-full flex-wrap flex flex-col items-center justify-center 
+        <div className='py-8 border-2    flex-wrap flex flex-col items-center justify-center 
 dark:text-white text-lg border-white'>
           <h1 className='text-2xl font-bold font-inter'>Sosyal Medya</h1>
           <div className='dark:text-gray-400 '>
@@ -89,3 +90,5 @@ dark:text-white text-lg border-white'>
 }
 
 export default Footer
+
+// grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4

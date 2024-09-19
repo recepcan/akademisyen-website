@@ -17,15 +17,16 @@ function GetPosts({limit}) {
 
     if(error) return <div>{error}</div>
   return (
-    <div className='grid border   border-blue-400  justify-items-center items-center 
-    sm:grid-cols-1  lg:grid-cols-2 xl:grid-cols-3  2xl:grid-cols-4 md:w-[75%]  flex-wrap py-20  gap-y-5'>
+    <div className='grid    border-red-400 justify-items-center  items-center overflow-hidden
+    sm:grid-cols-1  md:grid-cols-2 lg:grid-cols-3  2xl:grid-cols-4  md:w-[95%]
+    2xl:w-[1536px]  lg:w-[85%] w-full   flex-wrap py-20  gap-y-5'>
     
     {
      data.posts ?
        data?.posts?.map((post, i) => (
-         <Link className='last: ' to={`/post/${post.slug}`} key={i}>
+         <Link className=' border-blue-500 ' to={`/post/${post.slug}`} key={i}>
            <div className='w-[320px]   h-[400px] dark:shadow-none shadow-lg shadow-gray-400  group relative transition-all hover:scale-105 
-           flex flex-col items-center space-y- rounded-lg dark:bg-gray-900 bg-white
+           flex flex-col items-center  rounded-lg dark:bg-gray-900 bg-white
              dark:border border-white'>
              <img className='w-full h-52   group-hover:rounded-lg duration-700 rounded-t-lg object-cover  transition-all border-b ' 
              src={post.image} alt={post.title} />

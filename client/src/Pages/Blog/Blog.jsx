@@ -13,7 +13,7 @@ function Blog() {
 
   return (
     <div className='w-full flex flex-col min-h-screen  justify-center items-center'>
-    <h1 className='text-5xl font-extrabold font-mono p-5 rounded-lg uppercase '>Blog</h1>
+    <h1 className='text-5xl font-extrabold font-titillium p-5 rounded-lg uppercase '>Blog</h1>
    <GetPosts/>
 
 

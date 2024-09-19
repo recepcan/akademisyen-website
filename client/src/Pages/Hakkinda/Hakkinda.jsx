@@ -23,14 +23,14 @@ function Hakkinda() {
     <h1 className='text-3xl'>HAKKINDA</h1>
 
      <div className='bg-white dark:bg-gray-950 dark:border border-white relative
-      rounded-2xl  post-content w-[80%] flex  p-5 space-x-8 justify-start '>
+      rounded-2xl  post-content w-full  lg:w-[90%] flex flex-col md:flex-row  p-5 space-y-5 md:space-x-8 justify-start '>
      
-     <div className='w-1/3 h-[500px] sticky top-0 bg-gray-400 rounded-lg'>
+     <div className='md:w-1/3 w-full h-[500px] md:sticky top-0 bg-gray-400 rounded-lg'>
      
      </div>
      
      <div
-       className="p-3  mx-auto w-2/3 leading-6 tracking-wider "
+       className="p-3  mx-auto w-full md:w-2/3 leading-6 tracking-wider "
         dangerouslySetInnerHTML={{ __html: textById && textById.content }}/>
      </div> 
 
