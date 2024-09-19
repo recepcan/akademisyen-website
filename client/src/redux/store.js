@@ -6,13 +6,15 @@ import userAuthSlice from './userAuthSlice';
 import postsSlice from './postsSlice';
 import textsSlice from './textsSlice';
 import publicationSlice from './publicationSlice';
+import servicesSlice from './servicesSlice';
 
 const rootReducer = combineReducers({
   header: headerEventsSlice,
   user:userAuthSlice,
   posts:postsSlice,
   texts:textsSlice,
-  publications:publicationSlice
+  publications:publicationSlice,
+  services:servicesSlice
 });
 
 const persistConfig = {

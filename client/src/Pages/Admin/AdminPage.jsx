@@ -17,7 +17,7 @@ import SideBar from './SideBar';
 import {Button} from 'flowbite-react'
 import Profile from './Profile';
 import AdminPublicationsComponent from './AdminPublicationsComponent';
-import AdminServicesCompopnent from './AdminServicesCompopnent';
+import AdminServicesCompopnent from './AdminServicesComponent';
 
 
 

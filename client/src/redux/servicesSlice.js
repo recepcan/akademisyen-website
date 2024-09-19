@@ -8,8 +8,8 @@ const initialState = {
     limit:false
 };
 
-export const fetchPosts = createAsyncThunk('fetchPosts', async (limit) => {
-    const response = await fetch(`/api/post/getposts?limit=${limit}`);
+export const fetchServices = createAsyncThunk('fetchServices', async () => {
+    const response = await fetch(`/api/service/getservices`);
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
@@ -31,8 +31,8 @@ export const fetchPosts = createAsyncThunk('fetchPosts', async (limit) => {
 
 
 
-  const postSlice = createSlice({
-    name: "posts",
+  const servicesSlice = createSlice({
+    name: "service",
     initialState,
     reducers: {
         // highLimit: state => {
@@ -40,18 +40,18 @@ export const fetchPosts = createAsyncThunk('fetchPosts', async (limit) => {
         //   },
     },
     extraReducers: (builder) => {
-      builder.addCase(fetchPosts.pending, (state) => {
+      builder.addCase(fetchServices.pending, (state) => {
         state.loading = true;
         state.error = "";
       });
-      builder.addCase(fetchPosts.fulfilled, (state, action) => {
+      builder.addCase(fetchServices.fulfilled, (state, action) => {
         state.data = action.payload; // Veriyi doğrudan güncelliyor
         state.loading = false;
         state.error = "";
       });
-      builder.addCase(fetchPosts.rejected, (state) => {
+      builder.addCase(fetchServices.rejected, (state) => {
         state.loading = false;
-        state.error = "Error fetching posts data";
+        state.error =` Error fetching services data ${state.error}`;
       });
       // builder.addCase(fetchPost6.pending, (state) => {
       //   state.loading = true;
@@ -70,4 +70,4 @@ export const fetchPosts = createAsyncThunk('fetchPosts', async (limit) => {
   });
   
 
-export default postSlice.reducer;
+export default servicesSlice.reducer;
