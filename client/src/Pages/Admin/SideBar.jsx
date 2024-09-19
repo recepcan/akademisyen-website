@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import { AiFillLeftCircle, AiOutlineMenu } from 'react-icons/ai';
 import { TiHome } from "react-icons/ti";
 import { FcAbout } from "react-icons/fc";
-import { MdContentPaste, MdCreateNewFolder } from "react-icons/md";
+import { MdContentPaste, MdCreateNewFolder, MdHomeRepairService } from "react-icons/md";
 import { PiPhoneDisconnectThin } from "react-icons/pi";
 import { IoCloseSharp, IoDocumentText, IoDocumentTextSharp } from "react-icons/io5";
 import { FaPhoneFlip } from 'react-icons/fa6';
@@ -60,7 +60,11 @@ function SideBar({adminMenu}) {
       icon: <FaInfoCircle />
 
     },
+    {
+      title: "services",
+      icon: <MdHomeRepairService />
 
+    },
     {
       title: "texts",
       icon: <GrTextWrap />

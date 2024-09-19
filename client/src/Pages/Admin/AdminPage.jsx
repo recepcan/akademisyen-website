@@ -17,6 +17,7 @@ import SideBar from './SideBar';
 import {Button} from 'flowbite-react'
 import Profile from './Profile';
 import AdminPublicationsComponent from './AdminPublicationsComponent';
+import AdminServicesCompopnent from './AdminServicesCompopnent';
 
 
 
@@ -90,6 +91,16 @@ function AdminPage() {
             </Button>
           </Link>
           }
+          {
+            tab==="services" && 
+            <Link to={'/add-service'} className=' flex flex-col'>
+            <Button 
+            gradientDuoTone="purpleToBlue" outline
+            className='md:w-72 w-full  font-extrabold   '>
+              Add Service
+            </Button>
+          </Link>
+          }
 
           </div>
         {/*  {tab==='home' &&  (<AdminHomeComponent/>)}
@@ -99,7 +110,7 @@ function AdminPage() {
                 {tab==='contact' &&  (<AdminContactComponent/>)} 
            */}
 
-    
+           {tab==='services' &&  (<AdminServicesCompopnent/>)} 
           {tab==='posts' &&  (<AdminPostsComponent />)} 
           {tab===`texts` &&  (<AdminTextsComponent />)} 
           {tab===`profile` &&  (<Profile />)} 

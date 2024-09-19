@@ -25,6 +25,7 @@ import {Route,Routes} from 'react-router-dom'
 import CreatePublication from '../Pages/Admin/CreatePublication'
 import UpdatePublication from '../Pages/Admin/UpdatePublication'
 import PostPage from '../Pages/PostPage/PostPage'
+import AddService from '../Pages/Admin/AddService'
 function Layout() {
 
     const { menu } = useSelector(state => state.header)
@@ -60,6 +61,8 @@ function Layout() {
 
             <Route path='/create-publication' element={<CreatePublication />}/>
             <Route path='/update-publication/:publicationId' element={<UpdatePublication />}/>
+           
+            <Route path='/add-service' element={<AddService />}/>
             
           </Route>
 
