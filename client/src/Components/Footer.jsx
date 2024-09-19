@@ -3,7 +3,7 @@ import { FaReact, FaInstagram, FaLinkedin, FaWhatsapp, FaGithub } from 'react-ic
 import { Link } from 'react-router-dom'
 function Footer() {
   return (
-    <div className='w-full   bg-white bottom-0 dark:shadow-none 
+    <div className='w-full   bg-white bottom-0 right-0 left-0 dark:shadow-none 
          border-blue-500  text-black flex flex-col  max-lg:space-y-8  justify-center text-center items-center
         dark:text-white dark:bg-black transition-colors duration-300 dark:z-50 flex-1'>
       <div className='flex items-center justify-center flex-col w-full space-y-5  bg-transparent bg-gradient-to-b from-sky-100 to-white dark:from-[#030620] dark:to-black'>

@@ -17,7 +17,7 @@ function GetPosts({limit}) {
 
     if(error) return <div>{error}</div>
   return (
-    <div className='grid  border-red-400  justify-items-center items-center 
+    <div className='grid border   border-blue-400  justify-items-center items-center 
     sm:grid-cols-1  lg:grid-cols-2 xl:grid-cols-3  2xl:grid-cols-4 md:w-[75%]  flex-wrap py-20  gap-y-5'>
     
     {
