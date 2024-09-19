@@ -1,4 +1,4 @@
-import { Avatar, Button, Dropdown, Navbar, TextInput } from "flowbite-react";
+import { Avatar, Button, Dropdown,  TextInput } from "flowbite-react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import {
   FaFlagCheckered,
@@ -81,7 +81,7 @@ function Header() {
   ];
 
   return (
-    <Navbar className=" p-5 transition-all duration-300   bg-gradient-to-t from-sky-100 to-white dark:from-[#030620] dark:to-black">
+    <navbar className=" p-5 transition-all duration-300 flex justify-around   bg-gradient-to-t from-sky-100 to-white dark:from-[#030620] dark:to-black">
       {/* logo */}
       <Link
         to="/"
@@ -135,14 +135,14 @@ function Header() {
         </div>
       </div>
 
-      {/* mobil menu || toggle menu */}
+      {/* mobil menu  toggle menu */}
       <div
         className="lg:hidden text-3xl"
         onClick={() => dispatch(toggleMenu())}
       >
         <AiOutlineMenu />
       </div>
-    </Navbar>
+    </navbar>
   );
 }
 

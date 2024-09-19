@@ -21,7 +21,7 @@ function Footer() {
 
       <div className='w-full flex flex-wrap  2xl:w-[1536px] flex-row items-center justify-around p-4  border-black'>
 
-        <div className='py-8 border-2    flex-wrap flex flex-col items-center justify-center 
+        <div className='py-8     flex-wrap flex flex-col items-center justify-center 
     dark:text-white text-lg border-white'>
           <h1 className='text-2xl font-bold font-inter'>Bilgi</h1>
           <div className='dark:text-gray-400'>
@@ -42,7 +42,7 @@ function Footer() {
 
         </div>
 
-        <div className='py-8 border-2    flex-wrap flex flex-col items-center justify-center 
+        <div className='py-8     flex-wrap flex flex-col items-center justify-center 
 dark:text-white text-lg border-white'>
           <h1 className='text-2xl font-bold font-inter'>Hizmetler</h1>
           <div className='dark:text-gray-400 '>
@@ -62,7 +62,7 @@ dark:text-white text-lg border-white'>
 
         </div>
 
-        <div className='py-8 border-2    flex-wrap flex flex-col items-center justify-center 
+        <div className='py-8     flex-wrap flex flex-col items-center justify-center 
 dark:text-white text-lg border-white'>
           <h1 className='text-2xl font-bold font-inter'>Sosyal Medya</h1>
           <div className='dark:text-gray-400 '>
