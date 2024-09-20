@@ -26,6 +26,7 @@ import CreatePublication from '../Pages/Admin/CreatePublication'
 import UpdatePublication from '../Pages/Admin/UpdatePublication'
 import PostPage from '../Pages/PostPage/PostPage'
 import AddService from '../Pages/Admin/AddService'
+import UpdateService from '../Pages/Admin/UpdateService'
 function Layout() {
 
     const { menu } = useSelector(state => state.header)
@@ -63,6 +64,7 @@ function Layout() {
             <Route path='/update-publication/:publicationId' element={<UpdatePublication />}/>
            
             <Route path='/add-service' element={<AddService />}/>
+            <Route path='/update-service/:serviceId' element={<UpdateService />}/>
             
           </Route>
 

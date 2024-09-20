@@ -96,31 +96,32 @@ export default function AdminServicesComponent() {
                 <div className='bg-white dark:bg-[#1a2e44] dark:text-white items-center border-b  border-gray-300 
                 grid grid-cols-6 h-32 justify-center dark:border-gray-700  '>
                   <div className=' h-24  p-1  border-black  col-span-2 flex items-center justify-center text-center'>
-                  <Link
+                  <div
                   className='font-medium text-gray-900 dark:text-white line-clamp-3 overflow-hidden  border-black'
-                  to={`/post/${service.slug}`}
+                  
                 >
                 {service.title}
-                </Link>
+                </div>
                    
                   </div>
                   <div className=' h-24   border-black flex items-center justify-center  col-span-1'>
-                    <Link to={`/service/${service.slug}`}>
+                    <div
+                     >
                       <img
                         src={service.image}
                         alt={service.title}
                         className='w-20 h-24   border-black object-cover bg-gray-500 '
                       />
                       
-                    </Link>
+                    </div>
                   </div>
                   <div className='h-24   border-black flex items-center justify-center col-span-1'>
-                    <Link
+                    <div
                       className='font-medium text-gray-900 text-center dark:text-white line-clamp-3 overflow-hidden  border-black'
-                      to={`/service/${service.slug}`}
+                      
                     >
                     {new Date(service.createdAt).toLocaleDateString()}
-                    </Link>
+                    </div>
                   </div>
                   <div className='h-24   border-black flex items-center justify-center col-span-1'>
                     <span
