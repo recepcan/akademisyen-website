@@ -49,8 +49,8 @@ function CalismaAlanlari() {
                         <button
                             key={index}
                             className={` ${activeTab === tab.title ? 
-                                ' h-[70px] w-full p-2 max-sm:text-sm font-bold bg-sky-600 text-white box-border cursor-pointer border-b border-gray-600 transition-all flex justify-items-center' 
-                                : ' h-[70px] p-2 w-full hover:border-y-2 cursor-pointer transition-all border-b border-gray-600 box-border flex justify-center items-center'}`}
+                                ' h-[70px] w-full p-2 max-sm:text-sm font-bold bg-sky-600 text-white box-border cursor-pointer border-b border-gray-600 transition-all flex justify-center items-center' 
+                                : ' h-[70px] p-2 w-full hover:bg-sky-600 cursor-pointer transition-all border-b border-gray-600 box-border flex justify-center items-center'}`}
                             onClick={() => handleTabClick(tab.title)}
                         >
                             <div className={`${activeTab === tab.title ? 'text-white text-2xl max-md:text-4xl' : ' text-2xl max-md:text-4xl text-black'}`}></div>

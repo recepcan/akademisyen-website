@@ -67,7 +67,7 @@ export const deleteservice = async (req, res, next) => {
         return next(errorHandler(403, 'You are not allowed to delete this post'));
     }
     try {
-        await Post.findByIdAndDelete(req.params.postId);
+        await Service.findByIdAndDelete(req.params.serviceId);
         res.status(200).json('The post has been deleted');
     } catch (error) {
         next(error);

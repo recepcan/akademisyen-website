@@ -100,9 +100,9 @@ if(error) return <div>Error: {error}</div>
               {data?.publications?.map((pub,index) => (
                 <div key={index} className=''>
                   <div className='bg-white dark:bg-[#1a2e44] dark:text-white items-center border-b  border-gray-300 grid grid-cols-6 h-32 justify-center dark:border-gray-700  '>
-                    <div className=' h-24  border-black flex items-center justify-center col-span-2 '>
+                    <div className=' h-24 p-3 overflow-hidden border-black flex  col-span-2 '>
                         <div
-                            className='p-3 col-span-2 overflow-hidden font-titillium text-xs dark:bg-transparent dark:text-white flex-wrap   post-content '
+                            className=' leading-normal tracking-tight  overflow-hidden font-titillium text-xs  flex-wrap   post-content '
                             dangerouslySetInnerHTML={{ __html: pub && pub.content }}>
 
                         </div>

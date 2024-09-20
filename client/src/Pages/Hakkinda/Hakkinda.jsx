@@ -26,7 +26,7 @@ function Hakkinda() {
       rounded-2xl  post-content w-full  lg:w-[90%] flex flex-col md:flex-row  p-5 space-y-5 md:space-x-8 justify-start '>
      
      <div className='md:w-1/3 w-full h-[500px] md:sticky top-0 bg-gray-400 rounded-lg'>
-     
+        <img src={currentUser?.profilePicture} className='w-full h-full  rounded-lg' alt="" />
      </div>
      
      <div
