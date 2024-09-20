@@ -7,7 +7,7 @@ function Hakkinda() {
   const { currentUser } = useSelector(state => state.user)
   const dispatch = useDispatch()
 
-  const textId = '66eb4c5945b0189fbcc14b9a'
+  const textId = '66ed9f1b0038c1d953dcab66'
   useEffect(() => {
     if (textId) {
       dispatch(fetchTextById(textId));
@@ -26,7 +26,7 @@ function Hakkinda() {
       rounded-2xl  post-content w-full  lg:w-[90%] flex flex-col md:flex-row  p-5 space-y-5 md:space-x-8 justify-start '>
      
      <div className='md:w-1/3 w-full h-[500px] md:sticky top-0 bg-gray-400 rounded-lg'>
-        <img src={currentUser?.profilePicture} className='w-full h-full  rounded-lg' alt="" />
+        <img src={textById?.image} className='w-full h-full  rounded-lg' alt="" />
      </div>
      
      <div

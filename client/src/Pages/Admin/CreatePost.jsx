@@ -25,7 +25,6 @@ function CreatePost() {
 //   const [publishError, setPublishError] = useState(null);
 
   const navigate = useNavigate();
-
   const handleUpdloadImage = async () => {
     try {
       if (!file) {
@@ -63,9 +62,17 @@ function CreatePost() {
      toast.error(error);
     }
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      // handleUploadImage fonksiyonunu bekleyin ve sonucunu kontrol edin
+     
+  
+      // Eğer image yükleme başarısız olursa işlemi iptal edin
+    
+  
+      // Resim yükleme başarılıysa post oluşturma işlemini başlatın
       const res = await fetch('/api/post/create', {
         method: 'POST',
         headers: {
@@ -73,20 +80,22 @@ function CreatePost() {
         },
         body: JSON.stringify(formData),
       });
+  
       const data = await res.json();
+  
       if (!res.ok) {
         toast.error(data.message);
         return;
       }
-
+  
       if (res.ok) {
-      
         navigate(`/admin?tab=posts`);
       }
     } catch (error) {
-      toast.error(error.message,'Something went wrong');
+      toast.error(error.message, 'Something went wrong');
     }
   };
+  
 
 
     return (

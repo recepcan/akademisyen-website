@@ -12,6 +12,10 @@ const textSchema = new mongoose.Schema(
       required: false,
      
     },
+    image: {
+      type: String,
+      default:null
+    },
     userId:{
       type:String,
       required:true,

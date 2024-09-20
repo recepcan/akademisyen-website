@@ -34,9 +34,26 @@ function AdminTextsComponent() {
     <div className=' w-full min-h-screen  flex-1 p-3 space-y-5 rounded-lg font-sans'>
       {data?.texts?.map((text, i) => (
         <div key={i} className='p-7 dark:bg-[#1a2e44] bg-gray-100 space-y-2 relative rounded-lg'>
-          <div className='text-xs absolute right-2 top-2'>textId: <span className='text-sky-700'>{text._id}</span></div>
-          <div className='text-red-500 text-lg'><span className='dark:text-white text-black font-extrabold text-xl p-1'>Title:</span>{text.title}</div>
-          <div className='pl-3 post-content text-md'><span className='dark:text-white text-black font-extrabold text-lg p-1'>Content:</span>{text.content}</div>
+          <div className='text-xs absolute right-2 top-2'>
+          textId: 
+          <span className='text-sky-700'>
+          {text._id}</span>
+          </div>
+          <div className='text-red-500 text-lg'>
+          <span className='dark:text-white text-black font-extrabold text-xl p-1'>
+          Title:</span>{text.title}
+          </div>
+          <div className='pl-3 flex post-content text-md '>
+          <span className='dark:text-white text-black font-extrabold text-lg p-1 '>
+          Content:</span>
+         <p className='w-3/4 line-clamp-3'>
+         {text.content}
+         </p>
+
+          {
+            text.image&& <img className='w-1/4 h-40 ' src={text.image} alt="" />
+          }
+          </div>
           
           <div>
             <Link to={`/update-text/${text._id}`}>
