@@ -140,15 +140,20 @@ export default function DashPosts() {
       ) : (
         <p>You have no posts yet!</p>
       )}
-      {showModal && (
-        <div className='flex items-center justify-center rounded-lg p-2 absolute min-h-svh left-0 right-0 bottom-0 top-0 z-50 bg-black/50'>
-          <div className='bg-gray-200 p-20 relative rounded-lg border-2 border-sky-500'>
-            <button className='text-red-500 text-3xl absolute right-2 top-2' onClick={() => setShowModal(false)}>
-              <AiFillCloseCircle />
-            </button>
+      {showModal &&
+        <div
+          className='flex items-center justify-center  rounded-lg p-2 absolute min-h-svh left-0 right-0 bottom-0 top-0 z-50  bg-black/50'
+
+        >
+
+          <div />
+          <div className='bg-gray-200 dark:bg-gray-500 p-20 relative rounded-lg  border-4 border-black dark:border-white '>
+            <button className='text-red-600 bg-white rounded-full text-3xl absolute right-2 top-2' onClick={() => setShowModal(false)}> <AiFillCloseCircle /></button>
             <div className='text-center'>
-              <HiOutlineExclamationCircle className='h-14 w-14 text-gray-400 dark:text-gray-200 mb-4 mx-auto' />
-              <h3 className='mb-5 text-lg text-gray-500 dark:text-gray-400'>Are you sure you want to delete this post?</h3>
+              <HiOutlineExclamationCircle className='h-14 w-14 text-yellow-500 dark:text-yellow-300 mb-4 mx-auto' />
+              <h3 className='mb-5 text-lg  dark:text-gray-100'>
+                Are you sure you want to delete this post?
+              </h3>
               <div className='flex justify-center gap-4'>
                 <button className='bg-red-600 rounded-lg p-2 text-white font-sans font-bold' onClick={handleDeletePost}>
                   Yes, I'm sure
@@ -160,7 +165,7 @@ export default function DashPosts() {
             </div>
           </div>
         </div>
-      )}
+      }
     </div>
   );
 }
