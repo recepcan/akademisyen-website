@@ -160,7 +160,7 @@ if(error) return <div>Error: {error}</div>
               <div className='text-center'>
                 <HiOutlineExclamationCircle className='h-14 w-14 text-yellow-500 dark:text-yellow-300 mb-4 mx-auto' />
                 <h3 className='mb-5 text-lg  dark:text-gray-100'>
-                  Are you sure you want to delete this post?
+                  Are you sure you want to delete this publication?
                 </h3>
                 <div className='flex justify-center gap-4'>
                   <button className='bg-red-600 rounded-lg p-2 text-white font-sans font-bold' onClick={handleDeletePost}>
