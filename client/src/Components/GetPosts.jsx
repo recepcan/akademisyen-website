@@ -18,8 +18,9 @@ function GetPosts({limit}) {
     if(error) return <div>{error}</div>
   return (
     <div className='grid    border-red-400 justify-items-center  items-center overflow-hidden
-    sm:grid-cols-1  md:grid-cols-2 lg:grid-cols-3  2xl:grid-cols-4  md:w-[95%]
-    2xl:w-[1536px]  lg:w-[85%] w-full   flex-wrap py-20  gap-y-5'>
+    sm:grid-cols-1  md:grid-cols-2 lg:grid-cols-3  
+       max-w-[1080px]
+      w-full   flex-wrap py-20  gap-y-5'>
     
     {
      data.posts ?

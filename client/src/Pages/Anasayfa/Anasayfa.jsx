@@ -6,7 +6,8 @@ import Hakkinda from '../Hakkinda/Hakkinda'
 function Anasayfa() {
   
   return (
-    <div className='min-h-screen flex flex-col items-center space-y-8 p-5 '>
+    <div className='min-h-screen  
+    flex flex-col items-center justify-center space-y-8  '>
     <GetPosts limit={3}/>
    {/* <Editor/>*/}
   

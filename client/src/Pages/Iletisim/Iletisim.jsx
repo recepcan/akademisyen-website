@@ -15,11 +15,13 @@ function Iletisim() {
   });
 
   const navigate=useNavigate()
-  console.log(formData)
+  const { textByIdError, textByIdLoading, textById } = useSelector(state => state.texts);
+  const { currentUser } = useSelector(state => state.user);
+  const dispatch = useDispatch();
 
   // onChange event handler'ı - ID'ye göre yakalayıp state'i güncelliyoruz
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value.trim() });
+    setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
 
@@ -57,9 +59,7 @@ function Iletisim() {
     }
   };
 
-  const { textByIdError, textByIdLoading, textById } = useSelector(state => state.texts);
-  const { currentUser } = useSelector(state => state.user);
-  const dispatch = useDispatch();
+
 
   const textId = '66f04e20c1fabe4fdd011488';
   useEffect(() => {
@@ -122,13 +122,15 @@ function Iletisim() {
           </div>
 
           <textarea 
-            placeholder='mesaj'
-            id='message'
-            value={formData.message}
-            onChange={handleChange}
-            rows={5}
-            className='w-full p-3 outline-none border dark:bg-transparent dark:border-white rounded-xl' 
-          />
+  placeholder='mesaj'
+  id='message'
+  value={formData.message}
+  onChange={handleChange}
+  rows={5}
+  className='w-full p-3 outline-none border dark:bg-transparent dark:border-white rounded-xl 
+  whitespace-pre-wrap'
+/>
+
 
           <button 
             type='submit'
