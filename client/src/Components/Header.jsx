@@ -81,7 +81,7 @@ function Header() {
   ];
 
   return (
-    <navbar className=" p-5 transition-all duration-300 flex justify-around   bg-gradient-to-t from-sky-100 to-white dark:from-[#030620] dark:to-black">
+    <navbar className=" p-5 transition-all duration-300 flex justify-around   ">
       {/* logo */}
       <Link
         to="/"
