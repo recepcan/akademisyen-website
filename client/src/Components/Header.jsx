@@ -81,13 +81,13 @@ function Header() {
   ];
 
   return (
-    <navbar className=" p-5 transition-all duration-300 flex justify-around   ">
+    <header className=" p-5 transition-all duration-300 flex justify-around   ">
       {/* logo */}
       <Link
         to="/"
         className="self-center whitespace-nowrap text-sm sm:text-xl font-semibold "
       >
-        <span className="px-2 py-1 bg-gradient-to-tr bg-transparent from-sky-300 via-blue-500  to-purple-600 rounded-lg text-white">
+        <span className="px-2 py-1 border border-black  rounded-lg dark:border-white">
           Yunus
         </span>
         Altundag
@@ -142,7 +142,7 @@ function Header() {
       >
         <AiOutlineMenu />
       </div>
-    </navbar>
+    </header>
   );
 }
 

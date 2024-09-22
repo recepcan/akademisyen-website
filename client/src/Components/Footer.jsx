@@ -11,7 +11,7 @@ function Footer() {
        bg-transparent '>
         <Link to="/">
           <div className='flex items-center justify-center'>
-            <h1 className='bg-gradient-to-br from-blue-300 via-blue-500 to-purple-500  text-white p-2 rounded-2xl text-xl md:text-3xl font-bold font-sans'>
+            <h1 className='border border-black   dark:border-white p-2 rounded-2xl text-xl md:text-3xl font-bold font-sans'>
               Yunus Altundağ
             </h1>
           </div>
