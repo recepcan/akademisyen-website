@@ -42,7 +42,9 @@ function CalismaAlanlari() {
     };
 
     return (
-        <div className='min-h-screen p-5'>
+        <div className='min-h-screen p-5 
+        border-2 border-red-500  
+         flex items-center justify-center'>
             <div className="min-w-full dark:shadow-none py-3 box-border relative flex">
                 <div className="w-1/4 h-full sticky top-0 border-r dark:border-white border-black py-32 flex flex-col justify-start items-center">
                     {data?.services.map((tab, index) => (

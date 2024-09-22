@@ -42,8 +42,7 @@ function AdminPage() {
       }, [location.search]);
     
       return (
-        <div className='min-h-screen w-full  box-border 
-         border-yellow-400 relative  flex   '>
+        <div className='min-h-screen flex  justify-center '>
          
     
         {

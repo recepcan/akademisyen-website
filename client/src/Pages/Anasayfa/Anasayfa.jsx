@@ -1,13 +1,15 @@
 import React from 'react'
 import Editor from './Editor'
 import GetPosts from '../../Components/GetPosts'
+import Hakkinda from '../Hakkinda/Hakkinda'
 
 function Anasayfa() {
   
   return (
-    <div className='min-h-screen w-full flex flex-col items-center  p-5 '>
+    <div className='min-h-screen flex flex-col items-center space-y-8 p-5 '>
     <GetPosts limit={3}/>
    {/* <Editor/>*/}
+  
     </div>
   )
 }
