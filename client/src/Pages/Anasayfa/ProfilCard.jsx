@@ -21,11 +21,11 @@ function ProfilCard() {
 
 
   return (
-    <div className='lg:w-3/4 w-full min-h-[500px]   rounded-xl dark:border 
+    <div className='lg:w-3/4 w-full md:min-h-[500px]   rounded-xl dark:border 
     flex md:flex-row flex-col dark:shadow-none shadow-xl shadow-gray-400 
     '>
     
-    <div className='md:w-1/2  w-full min-h-[500px]    flex items-center justify-center p-5'>
+    <div className='md:w-1/2  w-full md:min-h-[500px]     flex items-center justify-center p-5'>
     <img src={textById?.image} alt="" 
     className=' w-[320px] h-[320px]  rounded-xl '/>
     </div>
