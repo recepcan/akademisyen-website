@@ -62,7 +62,9 @@ function Anasayfa() {
         className='transition-all duration-100  max-w-full max-h-[400px]  max-lg:hidden  rounded-xl  relative'
       >
       <img src={textById.image} alt="" className='w-full   h-full rounded-xl'/>
-       <div className='w-[450px] p-5 dark:shadow-none shadow-lg shadow-white h-full bg-white dark:bg-gray-900  z-10 absolute left-24 top-0 flex flex-col justify-around items-center'>
+       <div className='w-[450px] p-5 dark:shadow-none shadow-lg
+        shadow-white h-full bg-white dark:bg-gray-900 
+         z-10 absolute left-24 top-0 flex flex-col justify-around items-center'>
        <div
        className="flex flex-col text-center  w-full  leading-6 tracking-wider  post-content"
         dangerouslySetInnerHTML={{ __html: textById && textById.content }}/>
