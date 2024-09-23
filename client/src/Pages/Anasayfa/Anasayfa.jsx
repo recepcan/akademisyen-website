@@ -7,8 +7,8 @@ import ProfilCard from './ProfilCard'
 function Anasayfa() {
   
   return (
-    <div className='min-h-screen  
-    flex flex-col items-center justify-center space-y-20  '>
+    <div className='min-h-screen  p-5
+    flex flex-col items-center justify-center space-y-20  py-20'>
 <ProfilCard/>
 
 <div className='w-full flex flex-col items-center justify-center'>

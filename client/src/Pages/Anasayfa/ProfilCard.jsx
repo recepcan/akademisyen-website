@@ -21,17 +21,23 @@ function ProfilCard() {
 
 
   return (
-    <div className='w-3/4 h-[600px] border  rounded-xl p-5 flex items-center justify-center'>
-    <div className='w-1/3 h-full   border flex items-center justify-center'>
-    <img src={textById?.image} alt="" />
+    <div className='lg:w-3/4 w-full min-h-[500px]   rounded-xl dark:border 
+    flex md:flex-row flex-col dark:shadow-none shadow-xl shadow-gray-400 
+    '>
+    
+    <div className='md:w-1/2  w-full min-h-[500px]    flex items-center justify-center p-5'>
+    <img src={textById?.image} alt="" 
+    className=' w-[320px] h-[320px]  rounded-xl '/>
     </div>
     
-    <div className='w-2/3 h-full   border flex items-center justify-center'>
-    <div
-       className="p-3  mx-auto w-full md:w-2/3 leading-6 tracking-wider "
+    <div className='md:w-1/2 w-full min-h-[500px]    
+     flex flex-col items-center justify-center p-5 space-y-5'>
+   <div
+       className="flex flex-col text-center  w-full  leading-6 tracking-wider  post-content"
         dangerouslySetInnerHTML={{ __html: textById && textById.content }}/>
-    </div>
+        <button className='p-3 w-full rounded-lg bg-sky-600 text-white font-bold '>İletişime Geç</button>
 
+    </div>
     </div>
   )
 }
