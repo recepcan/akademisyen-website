@@ -59,7 +59,7 @@ function Anasayfa() {
 
       <div
         style={{ width,height }} // Dinamik genişlik
-        className='transition-all duration-100  max-w-full max-h-[400px]  max-lg:hidden  rounded-xl  relative'
+        className='transition-all duration-1000 ease-out  max-w-full max-h-[400px]  max-lg:hidden  rounded-xl  relative'
       >
       <img src={textById.image} alt="" className='w-full   h-full rounded-xl'/>
        <div className='w-[450px] p-5 dark:shadow-none shadow-lg

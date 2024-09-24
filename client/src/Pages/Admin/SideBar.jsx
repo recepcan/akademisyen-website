@@ -21,7 +21,7 @@ function SideBar({adminMenu}) {
   const dispatch = useDispatch();
   const { currentUser } = useSelector((state) => state.user);
   const { theme } = useSelector((state) => state.header);
-  const [tab, setTab] = useState('');
+  const [tab, setTab] = useState('home');
   
    const handleSignout = async () => {
     try {
@@ -113,7 +113,9 @@ function SideBar({adminMenu}) {
 
         {
           tabs.map((item, index) => (
-            <Link key={index} className={`${tab === item.title && 'dark:text-white  bg-sky-700 dark:bg-sky-500 text-white  font-extrabold'} w-full
+            <Link
+             key={index} 
+             className={`${tab === item.title && 'dark:text-white  bg-sky-700 dark:bg-sky-500 text-white  font-extrabold'} w-full
                rounded-none p-4 space-x-5  shadow-sm   md:hover:bg-sky-900 md:hover:text-white text-gray-900 dark:text-gray-400
                  flex items-center justify-start  text-xl font-extrabold`}
               to={`/admin?tab=${item.title}`}>
