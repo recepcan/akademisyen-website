@@ -7,6 +7,7 @@ import postsSlice from './postsSlice';
 import textsSlice from './textsSlice';
 import publicationSlice from './publicationSlice';
 import servicesSlice from './servicesSlice';
+import galeriSlice from './galeriSlice';
 
 const rootReducer = combineReducers({
   header: headerEventsSlice,
@@ -14,7 +15,8 @@ const rootReducer = combineReducers({
   posts:postsSlice,
   texts:textsSlice,
   publications:publicationSlice,
-  services:servicesSlice
+  services:servicesSlice,
+  images:galeriSlice
 });
 
 const persistConfig = {

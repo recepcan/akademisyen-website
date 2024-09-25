@@ -18,6 +18,7 @@ import {Button} from 'flowbite-react'
 import Profile from './Profile';
 import AdminPublicationsComponent from './AdminPublicationsComponent';
 import AdminServicesCompopnent from './AdminServicesComponent';
+import AdminGaleriComponent from './AdminGaleriComponent';
 
 
 
@@ -124,6 +125,7 @@ function AdminPage() {
           {tab===`texts` &&  (<AdminTextsComponent />)} 
           {tab===`profile` &&  (<Profile />)} 
           {tab===`publications` &&  (<AdminPublicationsComponent />)} 
+          {tab===`galeri` &&  (<AdminGaleriComponent />)} 
           </div>
         </div>
       )
