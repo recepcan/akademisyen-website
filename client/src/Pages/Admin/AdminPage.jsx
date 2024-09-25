@@ -100,6 +100,16 @@ function AdminPage() {
             </Button>
           </Link>
           }
+          {
+            tab==="galeri" && 
+            <Link to={'/add-image'} className=' flex flex-col'>
+            <Button 
+            gradientDuoTone="purpleToBlue" outline
+            className='md:w-72 w-full  font-extrabold   '>
+              Add image
+            </Button>
+          </Link>
+          }
 
           </div>
         {/*  {tab==='home' &&  (<AdminHomeComponent/>)}

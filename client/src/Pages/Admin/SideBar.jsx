@@ -9,7 +9,7 @@ import { FcAbout } from "react-icons/fc";
 import { MdContentPaste, MdCreateNewFolder, MdHomeRepairService } from "react-icons/md";
 import { PiPhoneDisconnectThin } from "react-icons/pi";
 import { IoCloseSharp, IoDocumentText, IoDocumentTextSharp } from "react-icons/io5";
-import { FaPhoneFlip } from 'react-icons/fa6';
+import { FaImages, FaPhoneFlip } from 'react-icons/fa6';
 import { FaInfoCircle, FaMoon } from 'react-icons/fa';
 import { BiSolidSun } from 'react-icons/bi';
 import {toggleTheme} from '../../redux/headerEventsSlice'
@@ -85,8 +85,9 @@ function SideBar({adminMenu}) {
     }
     ,
     {
-      title:"profile",
-      icon:<BsPersonCircle />
+      title:"galeri",
+      icon:<FaImages />
+
     },
 
   ];
