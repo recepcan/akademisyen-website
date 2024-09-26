@@ -47,11 +47,11 @@ function Galeri() {
 {
   data?.images.map((image,index)=>(
 <div key={index}
- className='max-w-[500px] h-[300px] overflow-hidden'>
+ className='max-w-[500px] max-sm:w-full sm:h-[300px] overflow-hidden'>
 <img 
 src={image.image} 
 alt=""
- className='max-w-[500px] h-[300px] rounded-xl '/>
+ className='max-w-[500px] max-sm:w-full sm:h-[300px] rounded-xl '/>
 </div>
   ))
 }
