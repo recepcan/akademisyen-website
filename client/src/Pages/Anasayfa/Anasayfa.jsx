@@ -6,6 +6,7 @@ import ProfilCard from './ProfilCard';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchTextById } from '../../redux/textsSlice';
 import Loading from '../../Components/Loading';
+import { toast } from 'react-toastify';
 
 function Anasayfa() {
 
@@ -14,11 +15,28 @@ function Anasayfa() {
   const { currentUser } = useSelector(state => state.user)
   const dispatch = useDispatch()
 
+  
+  const [text, setText] = useState(null);
+  
+
   const textId = '66f1694c41f7db638012b023'
   useEffect(() => {
-    if (textId) {
-      dispatch(fetchTextById(textId));
-    }
+    const fetchText = async () => {
+      try {
+          const res = await fetch(`/api/text/getTexts?textId=${textId}`);
+          const data = await res.json();
+          if (!res.ok) {
+              toast.error(data.message);
+              return;
+          }
+          if (res.ok) {
+              setText(data.texts[0]);
+          }
+      } catch (error) {
+          toast.error(error.message);
+      }
+  };
+  fetchText();
   }, [dispatch, textId]);
 
  
@@ -61,13 +79,13 @@ function Anasayfa() {
         style={{ width,height }} // Dinamik genişlik
         className='transition-all duration-1000 ease-out  max-w-full max-h-[400px]  max-lg:hidden  rounded-xl  relative'
       >
-      <img src={textById.image} alt="" className='w-full   h-full rounded-xl'/>
+      <img src={text?.image} alt="" className='w-full   h-full rounded-xl'/>
        <div className='w-[450px] p-5 dark:shadow-none shadow-lg
         shadow-white h-full bg-white dark:bg-gray-900 
          z-10 absolute left-24 top-0 flex flex-col justify-around items-center'>
        <div
        className="flex flex-col text-center  w-full  leading-6 tracking-wider  post-content"
-        dangerouslySetInnerHTML={{ __html: textById && textById.content }}/>
+        dangerouslySetInnerHTML={{ __html: text && text.content }}/>
         <button className='p-3 w-1/2 rounded-lg bg-sky-600 text-white font-bold '>Devamını Oku</button>
 
        </div>

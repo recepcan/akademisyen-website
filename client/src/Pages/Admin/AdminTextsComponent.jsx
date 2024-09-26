@@ -10,10 +10,10 @@ function AdminTextsComponent() {
   const { currentUser } = useSelector(state => state.user);
 
   useEffect(() => {
-    if (currentUser && currentUser._id) {
-      dispatch(fetchTexts(currentUser));
-    }
-  }, [dispatch, currentUser]);
+   
+      dispatch(fetchTexts());
+    
+  }, [dispatch]);
 
   console.log('Component data:', data); 
 

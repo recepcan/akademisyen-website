@@ -167,10 +167,12 @@ export default function AdminServicesComponent() {
                 Are you sure you want to delete this service?
               </h3>
               <div className='flex justify-center gap-4'>
-                <button className='bg-red-600 rounded-lg p-2 text-white font-sans font-bold' onClick={handleDeletePost}>
+                <button className='bg-red-600 rounded-lg p-2 text-white font-sans font-bold'
+                 onClick={handleDeleteService}>
                   Yes, I'm sure
                 </button>
-                <button className='bg-sky-600 rounded-lg p-2 text-white font-sans font-bold' onClick={() => setShowModal(false)}>
+                <button className='bg-sky-600 rounded-lg p-2 text-white font-sans font-bold' 
+                onClick={() => setShowModal(false)}>
                   No, cancel
                 </button>
               </div>

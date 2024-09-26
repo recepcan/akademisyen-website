@@ -1,22 +1,37 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchTextById } from '../../redux/textsSlice'
+import { fetchTextById, fetchTexts } from '../../redux/textsSlice'
 import Loading from '../../Components/Loading'
+import { toast } from 'react-toastify'
 
 function ProfilCard() {
-    const { textByIdError, textByIdLoading, textById } = useSelector(state => state.texts)
-  const { currentUser } = useSelector(state => state.user)
-  const dispatch = useDispatch()
+    const { error, loading,data } = useSelector(state => state.texts)
+    const dispatch = useDispatch()
+  const [text, setText] = useState(null);
+  
 
   const textId = '66f08302dfdee82f39a051b7'
   useEffect(() => {
-    if (textId) {
-      dispatch(fetchTextById(textId));
-    }
+    const fetchText = async () => {
+      try {
+          const res = await fetch(`/api/text/getTexts?textId=${textId}`);
+          const data = await res.json();
+          if (!res.ok) {
+              toast.error(data.message);
+              return;
+          }
+          if (res.ok) {
+              setText(data.texts[0]);
+          }
+      } catch (error) {
+          toast.error(error.message);
+      }
+  };
+  fetchText();
   }, [dispatch, textId]);
 
-  if (textByIdLoading) return <Loading />
-  if (textByIdError) return <div className='min-h-screen flex items-center justify-center'>Error: {textByIdError}</div>;
+  if (loading) return <Loading />
+  if (error) return <div className='min-h-screen flex items-center justify-center'>Error: {error}</div>;
   
 
 
@@ -26,7 +41,7 @@ function ProfilCard() {
     '>
     
     <div className='md:w-1/2  w-full md:min-h-[500px]     flex items-center justify-center p-5'>
-    <img src={textById?.image} alt="" 
+    <img src={text?.image} alt="" 
     className=' w-[320px] h-[320px]  rounded-xl '/>
     </div>
     
@@ -34,7 +49,7 @@ function ProfilCard() {
      flex flex-col items-center justify-center p-5 space-y-5'>
    <div
        className="flex flex-col text-center  w-full  leading-6 tracking-wider  post-content"
-        dangerouslySetInnerHTML={{ __html: textById && textById.content }}/>
+        dangerouslySetInnerHTML={{ __html: text && text.content }}/>
         <button className='p-3 w-full rounded-lg bg-sky-600 text-white font-bold '>İletişime Geç</button>
 
     </div>

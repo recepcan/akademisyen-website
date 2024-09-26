@@ -9,8 +9,10 @@ const initialState = {
     textByIdError: ''
 };
 
-export const fetchTexts = createAsyncThunk('fetchTexts', async (currentUser) => {
-    const response = await fetch(`/api/text/getTexts?userId=${currentUser._id}`);
+export const fetchTexts = createAsyncThunk('fetchTexts', async () => {
+   
+      const response = await fetch(`/api/text/getTexts`);
+    
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }

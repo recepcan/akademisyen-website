@@ -75,21 +75,22 @@ export const google = async (req, res, next) => {
       const token = jwt.sign(
         { id: user._id, isAdmin: user.isAdmin },
         process.env.JWT_SECRET,
-        {expiresIn:'1d'}
+        { expiresIn: '24h' } // Explicit 24 hours
       );
       const { password, ...rest } = user._doc;
       res
         .status(200)
         .cookie('access_token', token, {
           httpOnly: true,
+          maxAge: 24 * 60 * 60 * 1000, // 1 day in milliseconds
+          secure: process.env.NODE_ENV === 'production',
+          sameSite: 'strict',
         })
         .json(rest);
-    }else if(!user){
-      console.log("there is no account the name of ...")
-      redirect('/')
-    }
-    
-    else {
+    } else if (!user) {
+      console.log("there is no account the name of ...");
+      res.redirect('/');  // Make sure you're using res.redirect, not plain redirect
+    } else {
       const generatedPassword =
         Math.random().toString(36).slice(-8) +
         Math.random().toString(36).slice(-8);
@@ -106,13 +107,16 @@ export const google = async (req, res, next) => {
       const token = jwt.sign(
         { id: newUser._id, isAdmin: newUser.isAdmin },
         process.env.JWT_SECRET,
-        {expiresIn:'1d'}
+        { expiresIn: '24h' } // Explicit 24 hours
       );
       const { password, ...rest } = newUser._doc;
       res
         .status(200)
         .cookie('access_token', token, {
           httpOnly: true,
+          maxAge: 24 * 60 * 60 * 1000, // 1 day in milliseconds
+          secure: process.env.NODE_ENV === 'production',
+          sameSite: 'strict',
         })
         .json(rest);
     }

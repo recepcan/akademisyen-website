@@ -65,6 +65,7 @@ export const getTextById = async (req, res, next) => {
   } catch (error) {
     // Hata durumunda daha bilgilendirici bir yanıt döndürme
     console.error('Error fetching text:', error);
+    next(error)
     res.status(500).json({ message: 'Internal server error', error: error.message });
   }
 };;
