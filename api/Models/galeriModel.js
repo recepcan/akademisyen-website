@@ -16,7 +16,7 @@ const galeriSchema = new mongoose.Schema(
         },
     category: {
       type: String,
-      default: '16/9',
+      default: '3/4',
     }
   },
   { timestamps: true }

@@ -82,10 +82,10 @@ function Anasayfa() {
       >
       <img src={text?.image} alt="" className='w-full   h-full rounded-xl'/>
        <div className='w-[450px] p-5 dark:shadow-none shadow-lg
-        shadow-white h-full bg-white dark:bg-gray-900 
+        shadow-white h-full bg-black/20 backdrop-blur-lg text-white dark:bg-gray-900 
          z-10 absolute left-24 top-0 flex flex-col justify-around items-center'>
        <div
-       className="flex flex-col text-center  w-full  leading-6 tracking-wider  post-content"
+       className="flex flex-col  text-center  w-full  leading-6 tracking-wider  post-content"
         dangerouslySetInnerHTML={{ __html: text && text.content }}/>
         <Link to="/hakkinda" className='p-3 w-1/2 flex items-center justify-center text-center  rounded-lg bg-sky-600 text-white font-bold '>
         Devamını Oku</Link>
