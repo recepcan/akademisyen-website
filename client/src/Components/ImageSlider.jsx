@@ -15,15 +15,15 @@ function ImageSlider({ images }) {
       pagination={{ clickable: true }}
       autoplay={{ delay: 3000 }}
       loop={true}
-      className="w-full h-[650px]"
+      className="w-full h-[630px]  rounded-xl"
     >
       {images.map((image, index) => (
         <SwiperSlide key={index}>
-          <div className="w-full h-full">
+          <div className="w-full h-full rounded-xl">
             <img
               src={image.image}
               alt={`Slide ${index}`}
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-full object-cover rounded-xl"
             />
           </div>
         </SwiperSlide>

@@ -37,7 +37,7 @@ function Galeri() {
   return (
     <div className='min-h-screen flex flex-col p-5 space-y-5'>
 
-<div className='w-full '>
+<div className='w-full rounded-xl'>
 
 <ImageSlider images={data.images} />
 
