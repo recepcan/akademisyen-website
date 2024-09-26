@@ -52,7 +52,7 @@ function ProfilCard() {
        className="flex flex-col text-center  w-full  leading-6 tracking-wider  post-content"
         dangerouslySetInnerHTML={{ __html: text && text.content }}/>
         <Link to="/iletisim"
-         className='p-3 w-full rounded-lg bg-sky-600 text-white font-bold '>
+         className='p-3 flex items-center justify-center text-center w-full rounded-lg bg-sky-600 text-white font-bold '>
          İletişime Geç</Link>
 
     </div>
