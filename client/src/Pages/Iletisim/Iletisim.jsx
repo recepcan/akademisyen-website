@@ -142,7 +142,7 @@ function Iletisim() {
 
         <div className='md:w-1/2 w-full h-full border-black flex items-center justify-center text-center'>
           <div
-            className="p-3 mx-auto w-2/3 post-content backdrop-blur-lg rounded-xl text-white
+            className="p-3 mx-auto w-full md:w-2/3 post-content backdrop-blur-lg rounded-xl text-white
             bg-gradient-to-tr from-teal-500 via-teal-700 to-teal-900"
             dangerouslySetInnerHTML={{ __html: textById && textById.content }}
           />

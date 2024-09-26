@@ -44,24 +44,26 @@ function CalismaAlanlari() {
     return (
         <div className='min-h-screen p-5 
         border-red-500  
-         flex items-center justify-center'>
-            <div className="min-w-full dark:shadow-none py-3 box-border relative flex">
-                <div className="w-1/4 h-full sticky top-0 border-r dark:border-white border-black py-32 flex flex-col justify-start items-center">
+         flex items-start justify-center'>
+            <div className="min-w-full dark:shadow-none py-3 box-border relative flex flex-col md:flex-row">
+                <div className="md:w-1/4 z-20 w-full max-md:overflow-auto md:h-full sticky top-0 shadow-xl dark:shadow-none shadow-gray-400
+                  flex flex-row md:flex-col max-md:h-[100px] bg-white dark:bg-gray-900 rounded-xl
+                 dark:border-white border-black justify-center md:justify-start items-center md:dark:border-r-2">
                     {data?.services.map((tab, index) => (
                         <button
                             key={index}
                             className={` ${activeTab === tab.title ? 
-                                ' h-[70px] w-full p-2 max-sm:text-sm font-bold bg-sky-600 text-white box-border cursor-pointer border-b border-gray-600 transition-all flex justify-center items-center' 
-                                : ' h-[70px] p-2 w-full hover:bg-sky-600 cursor-pointer transition-all border-b border-gray-600 box-border flex justify-center items-center'}`}
+                                ' md:h-[70px] max-md:h-[100px] rounded-xl  md:w-full p-2 max-sm:text-sm font-bold bg-sky-600 text-white box-border cursor-pointer border-b border-gray-600 transition-all flex justify-center items-center' 
+                                : ' md:h-[70px] p-2 max-md:h-[100px] rounded-xl  md:w-full hover:bg-sky-600 cursor-pointer transition-all border-b border-gray-600 box-border flex justify-center items-center'}`}
                             onClick={() => handleTabClick(tab.title)}
                         >
                             <div className={`${activeTab === tab.title ? 'text-white text-2xl max-md:text-4xl' : ' text-2xl max-md:text-4xl text-black'}`}></div>
-                            <h1 className='text-lg max-md:hidden '>{tab.title}</h1>
+                            <h1 className='md:text-lg  text-xs  md:w-full'>{tab.title}</h1>
                         </button>
                     ))}
                 </div>
 
-                <div className="w-3/4 h-full dark:text-white items-center justify-center flex-1 text-sm md:text-lg font-sans tracking-wider leading-6">
+                <div className="w-full md:w-3/4 h-full dark:text-white items-center justify-center flex-1 text-sm md:text-lg font-sans tracking-wider leading-6">
                     {data?.services.map((tab, index) => (
                         activeTab === tab.title && (
                             <div key={index} className='flex space-y-8 justify-center items-center relative flex-col w-full'>
