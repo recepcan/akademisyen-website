@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchTextById, fetchTexts } from '../../redux/textsSlice'
 import Loading from '../../Components/Loading'
 import { toast } from 'react-toastify'
+import { Link } from 'react-router-dom'
 
 function ProfilCard() {
     const { error, loading,data } = useSelector(state => state.texts)
@@ -50,7 +51,9 @@ function ProfilCard() {
    <div
        className="flex flex-col text-center  w-full  leading-6 tracking-wider  post-content"
         dangerouslySetInnerHTML={{ __html: text && text.content }}/>
-        <button className='p-3 w-full rounded-lg bg-sky-600 text-white font-bold '>İletişime Geç</button>
+        <Link to="/iletisim"
+         className='p-3 w-full rounded-lg bg-sky-600 text-white font-bold '>
+         İletişime Geç</Link>
 
     </div>
     </div>

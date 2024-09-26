@@ -45,7 +45,7 @@ function CreatePost() {
         },
         
         (error) => {
-          toast.error('Image upload failed');
+          toast.error('Image upload failed',error);
           setImageUploadProgress(null);
         },
         () => {
@@ -57,9 +57,9 @@ function CreatePost() {
         }
       );
     } catch (error) {
-      toast.error('Image upload failed');
+      toast.error(error);
       setImageUploadProgress(null);
-     toast.error(error);
+    
     }
   };
 

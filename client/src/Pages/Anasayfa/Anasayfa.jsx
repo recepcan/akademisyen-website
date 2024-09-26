@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchTextById } from '../../redux/textsSlice';
 import Loading from '../../Components/Loading';
 import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 
 function Anasayfa() {
 
@@ -86,7 +87,8 @@ function Anasayfa() {
        <div
        className="flex flex-col text-center  w-full  leading-6 tracking-wider  post-content"
         dangerouslySetInnerHTML={{ __html: text && text.content }}/>
-        <button className='p-3 w-1/2 rounded-lg bg-sky-600 text-white font-bold '>Devamını Oku</button>
+        <Link to="/hakkinda" className='p-3 w-1/2 flex items-center justify-center  rounded-lg bg-sky-600 text-white font-bold '>
+        Devamını Oku</Link>
 
        </div>
 
