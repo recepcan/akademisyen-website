@@ -43,7 +43,7 @@ function Galeri() {
 
 </div>
 
-<div className='w-full flex flex-wrap items-center justify-evenly  gap-5 '>
+<div className='w-full flex flex-wrap items-center justify-between  gap-5 '>
 {
   data?.images.map((image,index)=>(
 <div key={index}
