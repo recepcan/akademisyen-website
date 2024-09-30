@@ -15,7 +15,7 @@ function ImageSlider({ images }) {
       pagination={{ clickable: true }}
       autoplay={{ delay: 3000 }}
       loop={true}
-      className="w-full h-[630px]  rounded-xl"
+      className="w-full h-[600px]  rounded-xl"
     >
       {images.map((image, index) => (
         <SwiperSlide key={index}>

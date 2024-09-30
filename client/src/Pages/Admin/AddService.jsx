@@ -23,7 +23,7 @@ function AddService() {
 //   const [imageUploadError, setImageUploadError] = useState(null);
   const [formData, setFormData] = useState({});
 //   const [publishError, setPublishError] = useState(null);
-
+console.log(formData)
   const navigate = useNavigate();
 
   const handleUpdloadImage = async () => {
@@ -101,7 +101,7 @@ function AddService() {
                 onChange={(e)=>setFormData({...formData,title:e.target.value})} 
                 type="text"
                  placeholder='Title'
-                  required 
+                   
                   id='title' 
                 className='flex-1 p-2 dark:bg-gray-900 border border-black dark:border-white rounded-lg  font-bold outline-1' />
                 <div className='flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3'>
@@ -133,7 +133,9 @@ function AddService() {
                     {
                         formData.image && (
                             <div className='w-full  flex items-center justify-center bg-sky-200'>
-                            <img src={formData.image} alt='upload' className='w-full h-72 object-contain'/>
+                            <img src={formData.image} 
+                            alt='upload' 
+                            className='w-full h-72 object-contain'/>
                       
                             </div>  )
                     }
