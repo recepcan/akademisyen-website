@@ -60,7 +60,7 @@ function CalismaAlanlari() {
                 <div className="md:w-1/4 z-20 w-full max-md:overflow-auto md:h-full sticky top-0 shadow-xl dark:shadow-none shadow-gray-400
                   flex flex-row md:flex-col  bg-white dark:bg-gray-900 rounded-xl
                   max-md:space-x-3 p-3 md:space-y-3
-                 dark:border-white border-black  md:justify-start items-center md:dark:border-r-2">
+                 dark:border-white border-black  md:justify-start items-center dark:border-2 md:dark:border-r-2">
                     {data?.services.map((tab, index) => (
                         <button
                             key={index}
