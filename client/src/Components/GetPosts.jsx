@@ -29,7 +29,7 @@ function GetPosts({limit}) {
            <div className='w-[320px]   h-[400px] dark:shadow-none shadow-lg shadow-gray-400  group relative transition-all hover:scale-105 
            flex flex-col items-center  rounded-lg dark:bg-gray-900 bg-white
              dark:border border-white'>
-             <img className='w-full h-52   group-hover:rounded-lg duration-700 rounded-t-lg object-cover  transition-all border-b ' 
+             <img loading='lazy' className='w-full h-52   group-hover:rounded-lg duration-700 rounded-t-lg object-cover  transition-all border-b ' 
              src={post.image} alt={post.title} />
            
              <div className='p-2 w-full flex-1'>

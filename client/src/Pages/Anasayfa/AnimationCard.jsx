@@ -17,28 +17,28 @@ function AnimationCard() {
     }, [dispatch, textId]);
 console.log(textById,"textıd= 66f1694c41f7db638012b023")
 
-    useEffect(() => {
-        const handleScroll = () => {
-          const scrollY = window.scrollY;
-          // Genişlik artışı
-          const newWidth = Math.min(window.innerWidth, 600 + scrollY);
-          setWidth(`${newWidth}px`);
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //       const scrollY = window.scrollY;
+    //       // Genişlik artışı
+    //       const newWidth = Math.min(window.innerWidth, 600 + scrollY);
+    //       setWidth(`${newWidth}px`);
     
-          // Yükseklik artışı
-          const newHeight = Math.min(window.innerHeight, 50 + scrollY);
-          setHeight(`${newHeight}px`);
-        };
+    //       // Yükseklik artışı
+    //       const newHeight = Math.min(window.innerHeight, 50 + scrollY);
+    //       setHeight(`${newHeight}px`);
+    //     };
     
-        window.addEventListener('scroll', handleScroll);
+    //     window.addEventListener('scroll', handleScroll);
     
-        return () => {
-          window.removeEventListener('scroll', handleScroll); // Temizleme
-        };
-      }, []);
+    //     return () => {
+    //       window.removeEventListener('scroll', handleScroll); // Temizleme
+    //     };
+    //   }, []);
   return (
    <>
    <div
-   style={{ width,height }} // Dinamik genişlik
+    
    className='transition-all duration-1000 ease-out  max-w-full max-h-[400px]  max-lg:hidden  rounded-xl  relative'
  >
  <img src={textById?.image} alt="" className='w-full   h-full rounded-xl'/>

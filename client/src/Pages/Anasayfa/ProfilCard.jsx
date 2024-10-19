@@ -42,7 +42,7 @@ function ProfilCard() {
     '>
     
     <div className='md:w-1/2  w-full md:min-h-[500px]     flex items-center justify-center p-5'>
-    <img src={text?.image} alt="" 
+    <img loading='lazy' src={text?.image} alt="" 
     className=' w-[320px] h-[320px]  rounded-xl '/>
     </div>
     

@@ -42,21 +42,23 @@ function PostPage() {
     }, []);
 
     return (
-        <div className="min-h-screen  p-10 flex max-md:flex-col items-center justify-center  border-black">
+        <div className="p-5 md:space-x-5 max-md:space-y-5 md:p-10 flex max-md:flex-col items-center md:items-start   justify-center  border-black">
             {/* Sticky olan element */}
             
-                <img src={post && post.image} className="object-contain  h-1/2  w-1/3 
-                  flex items-center justify-center  border-red-700" alt="" />
+                <img src={post && post.image} className="object-contain md:sticky top-0  max-h-[500px]
+                   rounded-xl flex items-center justify-center  bg-gray-200 border-red-700"
+                   alt="" />
            
 
             {/* İçerik kısmı */}
-            <div className="w-2/3 min-h-[500px] flex flex-col justify-around   p-4 border-blue-700">
-                <h1 className="text-center uppercase text-3xl lg:text-4xl font-semibold">
+            <div className="md:w-2/3 w-full min-h-[500px]  flex flex-col justify-between space-y-5   border-blue-700">
+                
+            <h1 className="text-center w-full  uppercase text-3xl  p-3 font-semibold   border-blue-700">
                     {post && post.title}
                 </h1>
 
                 <div
-                    className="p-3 max-w-2xl mx-auto w-full post-content"
+                    className="p-3  mx-auto w-full post-content   border-blue-700"
                     dangerouslySetInnerHTML={{ __html: post && post.content }}
                 />
 

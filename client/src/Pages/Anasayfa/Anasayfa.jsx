@@ -44,27 +44,27 @@ function Anasayfa() {
 
 
 
-  const [width, setWidth] = useState('300px'); // Başlangıç genişliği
-  const [height, setHeight] = useState('300px'); // Başlangıç yüksekliği
+  // const [width, setWidth] = useState('300px'); // Başlangıç genişliği
+  // const [height, setHeight] = useState('300px'); // Başlangıç yüksekliği
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      // Genişlik artışı
-      const newWidth = Math.min(window.innerWidth, 600 + scrollY);
-      setWidth(`${newWidth}px`);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollY = window.scrollY;
+  //     // Genişlik artışı
+  //     const newWidth = Math.min(window.innerWidth, 600 + scrollY);
+  //     setWidth(`${newWidth}px`);
 
-      // Yükseklik artışı
-      const newHeight = Math.min(window.innerHeight, 50 + scrollY);
-      setHeight(`${newHeight}px`);
-    };
+  //     // Yükseklik artışı
+  //     const newHeight = Math.min(window.innerHeight, 50 + scrollY);
+  //     setHeight(`${newHeight}px`);
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll); // Temizleme
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll); // Temizleme
+  //   };
+  // }, []);
 
    // if (textByIdLoading) return <Loading />
   // if (textByIdError) return <div className='min-h-screen flex items-center justify-center'>Error: {textByIdError}</div>;
@@ -77,10 +77,10 @@ function Anasayfa() {
       <ProfilCard />
 
       <div
-        style={{ width,height }} // Dinamik genişlik
-        className='transition-all duration-1000 ease-out  max-w-full max-h-[400px]  max-lg:hidden  rounded-xl  relative'
+         
+        className='transition-all w-full border  duration-1000 ease-out  max-w-full max-h-[400px]  max-lg:hidden  rounded-xl  relative'
       >
-      <img src={text?.image} alt="" className='w-full   h-full rounded-xl'/>
+      <img src={text?.image} loading='lazy' alt="" className='w-full   max-h-[400px] rounded-xl'/>
        <div className='w-[450px] p-5 dark:shadow-none shadow-lg
         shadow-white h-full bg-black/20 backdrop-blur-lg text-white dark:bg-gray-900 
          z-10 absolute left-24 top-0 flex flex-col justify-around items-center'>
