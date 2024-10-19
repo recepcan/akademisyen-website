@@ -88,9 +88,9 @@ function Header() {
         className="self-center whitespace-nowrap text-sm sm:text-xl font-semibold "
       >
         <span className="px-2 py-1 border border-black  rounded-lg dark:border-white">
-          Yunus
+          Recep
         </span>
-        Altundag
+        Can
       </Link>
 
       {/* Navigation menu */}

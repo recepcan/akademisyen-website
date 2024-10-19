@@ -12,11 +12,11 @@ function Footer() {
         <Link to="/">
           <div className='flex items-center justify-center'>
             <h1 className='border border-black   dark:border-white p-2 rounded-2xl text-xl md:text-3xl font-bold font-sans'>
-              Yunus Altundağ
+            Recep Can
             </h1>
           </div>
         </Link>
-        <h2> Copyright©2024 Yunus Altundag. All rights reserved.</h2>
+        <h2> Copyright©2024 Recep Can. All rights reserved.</h2>
         <hr className='w-[90%] border-black  dark:border-sky-400 ' />
       </div>
 
@@ -63,21 +63,24 @@ dark:text-white text-lg border-white'>
 
         </div>
 
+        
+
         <div className='py-8     flex-wrap flex flex-col items-center justify-center 
-dark:text-white text-lg border-white'>
-          <h1 className='text-2xl font-bold font-inter'>Sosyal Medya</h1>
-          <div className='dark:text-gray-400 '>
-            <button className=' flex items-center justify-start pl-24 space-x-2   text-lg p-2 text-gray-500 hover:underline dark:hover:text-white  w-[300px]     rounded-lg  hover:scale-110 transition-all '>
-              <FaInstagram className='text-xl text-red-400' /> <h1>İnstagram</h1>
+    dark:text-white text-lg border-white'>
+          <h1 className='text-2xl font-bold font-inter'>Kariyer</h1>
+          <div className='dark:text-gray-400'>
+            <button className=' flex items-center justify-center  text-lg p-2   w-[300px] text-gray-500 hover:underline dark:hover:text-white     rounded-lg  hover:scale-110 transition-all '>
+             Lorem, ipsum dolor.
             </button>
-            <button className='flex items-center justify-start pl-24 space-x-2   text-lg p-2  w-[300px]  text-gray-500 hover:underline dark:hover:text-white    rounded-lg  hover:scale-110 transition-all'>
-              <FaLinkedin className='text-xl text-sky-400' /><h1>Linkedin</h1>
+
+            <button className='flex items-center justify-center  text-lg p-2  w-[300px] text-gray-500 hover:underline dark:hover:text-white    rounded-lg  hover:scale-110 transition-all'>
+            Lorem, ipsum dolor.
             </button>
-            <button className='flex items-center justify-start pl-24 space-x-2   text-lg p-2  w-[300px] text-gray-500 hover:underline dark:hover:text-white    rounded-lg  hover:scale-110 transition-all'>
-              <FaGithub className='text-xl text-purple-500' /><h1>Github</h1>
+            <button className='flex items-center justify-center  text-lg p-2  w-[300px]  text-gray-500 hover:underline dark:hover:text-white    rounded-lg  hover:scale-110 transition-all'>
+            Lorem, ipsum dolor.
             </button>
-            <button className='flex items-center justify-start pl-24 space-x-2   text-lg p-2  w-[300px]  text-gray-500 hover:underline dark:hover:text-white    rounded-lg  hover:scale-110 transition-all'>
-              <FaWhatsapp className='text-xl text-green-400' /><h1>Whatsapp</h1>
+            <button className='flex items-center justify-center  text-lg p-2  w-[300px]  text-gray-500 hover:underline dark:hover:text-white    rounded-lg  hover:scale-110 transition-all'>
+            Lorem, ipsum dolor.
             </button>
           </div>
 
@@ -102,7 +105,6 @@ dark:text-white text-lg border-white'>
           </div>
 
         </div>
-
 
   
 

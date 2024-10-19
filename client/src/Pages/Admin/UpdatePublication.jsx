@@ -63,7 +63,7 @@ function UpdatePublication() {
       }
 
       toast.success('Publication updated successfully');
-      navigate(`/publication/${publicationId}`);
+      navigate(`/admin?tab=publications`);
     } catch (error) {
       toast.error('Güncelleme sırasında hata oluştu: ' + error.message);
     }
