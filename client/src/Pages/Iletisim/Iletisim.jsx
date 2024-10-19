@@ -72,12 +72,12 @@ function Iletisim() {
   if (textByIdError) return <div className='min-h-screen flex items-center justify-center'>Error: {textByIdError}</div>;
 
   return (
-    <div className='min-h-screen border-green-500 p-5'>
-      <div className='w-full border-red-500 flex flex-col md:flex-row min-h-[600px] rounded-lg'>
+    <div className=' border-green-500 p-5'>
+      <div className='w-full  border-red-500 flex flex-col md:flex-row  max-md:space-y-5 md:space-x-5  min-h-[600px] rounded-lg'>
 
         <form
           onSubmit={handleSubmit}
-          className='md:w-1/2 w-full h-full border-black px-10 py-5
+          className='md:w-1/2 w-full h-full border-black
           flex flex-col items-center justify-evenly space-y-5'>
 
           <h1 className='text-3xl font-bold'>Benimle İletişime Geç</h1>
@@ -140,12 +140,15 @@ function Iletisim() {
 
         </form>
 
-        <div className='md:w-1/2 w-full h-full border-black flex items-center justify-center text-center'>
-          <div
-            className="p-3 mx-auto w-full md:w-2/3 post-content backdrop-blur-lg rounded-xl text-white
-            bg-gradient-to-tr from-teal-500 via-teal-700 to-teal-900"
-            dangerouslySetInnerHTML={{ __html: textById && textById.content }}
-          />
+        <div className='md:w-1/2 w-full h-full  border-black flex justify-end text-center'>
+         
+         
+         <div
+         className="p-3 w-full lg:w-3/4 post-content backdrop-blur-lg rounded-xl text-white
+         bg-gradient-to-tr from-teal-500 via-teal-700 to-teal-900"
+         dangerouslySetInnerHTML={{ __html: textById && textById.content }}
+       />
+      
         </div>
 
       </div>
