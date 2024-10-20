@@ -19,6 +19,9 @@ import Profile from './Profile';
 import AdminPublicationsComponent from './AdminPublicationsComponent';
 import AdminServicesCompopnent from './AdminServicesComponent';
 import AdminGaleriComponent from './AdminGaleriComponent';
+import AdminHomeComponent from './AdminHomeComponent';
+import AdminContactComponent from './AdminContactComponent';
+import AdminAboutComponent from './AdminAboutComponent';
 
 
 
@@ -113,13 +116,11 @@ function AdminPage() {
           }
 
           </div>
-        {/*  {tab==='home' &&  (<AdminHomeComponent/>)}
-          {tab==='' &&  (<AdminHomeComponent/>)} 
-          {tab==='about' && (<AdminAboutComponent/>) } 
-          {tab===`updatePost` &&  (<AdminUpdatePostComponent />)} 
-                {tab==='contact' &&  (<AdminContactComponent/>)} 
-           */}
-
+      
+           {tab==='about' && (<AdminAboutComponent/>) } 
+           {tab==='contact' &&  (<AdminContactComponent/>)} 
+           {tab==='home' &&  (<AdminHomeComponent/>)}
+           {tab==='' &&  (<AdminHomeComponent/>)} 
            {tab==='services' &&  (<AdminServicesCompopnent/>)} 
           {tab==='posts' &&  (<AdminPostsComponent />)} 
           {tab===`texts` &&  (<AdminTextsComponent />)} 

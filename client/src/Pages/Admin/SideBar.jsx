@@ -96,7 +96,7 @@ function SideBar({adminMenu}) {
 
   // console.log(currentUser.isAdmin)
   return (
-    <div className='w-full min-h-screen md:border-r-2 border-[#374151]
+    <div className='w-full min-h-screen md:border-r-2 md:border-t-2 border-[#374151] overflow-hidden
          flex  flex-col justify-between bg-transparent   space-y-5  dark:shadow-none  shadow-lg shadow-gray-400'>
 
 
