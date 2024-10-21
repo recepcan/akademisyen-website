@@ -21,6 +21,7 @@ function ImageSlider({ images }) {
         <SwiperSlide key={index}>
           <div className="w-full h-full rounded-xl">
             <img
+            loading='lazy'
               src={image.image}
               alt={`Slide ${index}`}
               className="w-full h-full object-cover rounded-xl"

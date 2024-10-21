@@ -49,6 +49,7 @@ function Galeri() {
 <div key={index}
  className='max-w-[500px] max-sm:w-full sm:h-[300px] overflow-hidden'>
 <img 
+loading='lazy'
 src={image.image} 
 alt=""
  className='max-w-[500px] max-sm:w-full sm:h-[300px] rounded-xl '/>

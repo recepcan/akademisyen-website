@@ -78,25 +78,28 @@ function AdminGaleriComponent() {
     };
 
     return (
-      <div className='flex space-x-5'>
-        {data?.images.map((image, index) => (
-          <div key={index} className='border-2 relative group'>
-            <button 
-              onClick={() => {
-                setShowModal(true);
-                setImageToDelete(image); // Set the image object to delete
-              }}
-              className='w-8 h-8 text-xl bg-black rounded-full text-red-600 absolute -translate-y-1/2 -translate-x-1/2 top-[50%] left-[50%] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'
-            >
-              <MdDelete />
-            </button>
-            <img
-              className='w-40 h-40 rounded-xl object-cover '
-              src={image.image}
-              alt=""
-            />
-          </div>
-        ))}
+      <div className='flex  flex-wrap gap-1  justify-center items-start  '>
+       
+       {data?.images.map((image, index) => (
+        <div key={index} className=' relative group border-black'>
+          <button 
+            onClick={() => {
+              setShowModal(true);
+              setImageToDelete(image); // Set the image object to delete
+            }}
+            className='w-8 h-8 text-xl bg-black rounded-full text-red-600 absolute -translate-y-1/2 -translate-x-1/2 top-[50%] left-[50%] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'
+          >
+            <MdDelete />
+          </button>
+          <img
+          loading='lazy'
+            className='w-40 h-40 rounded-xl object-cover '
+            src={image.image}
+            alt=""
+          />
+        </div>
+      ))}
+      
         
         {showModal &&
           <div className='flex items-center justify-center rounded-lg p-2 absolute min-h-svh left-0 right-0 bottom-0 top-0 z-50 bg-black/50'>

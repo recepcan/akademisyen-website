@@ -4,7 +4,7 @@ import uzay from '../../../public/uzay.png';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchServices } from '../../redux/servicesSlice';
 import Loading from '../../Components/Loading';
-
+import {toast} from 'react-toastify'
 function CalismaAlanlari() {
     const { currentUser } = useSelector((state) => state.user);
     const dispatch = useDispatch();
