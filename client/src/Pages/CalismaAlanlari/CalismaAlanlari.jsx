@@ -27,11 +27,11 @@ function CalismaAlanlari() {
 
     // Aktif sekmeye ait veriyi ve görseli memoize ediyoruz
     const activeService = useMemo(() => {
-        return data?.services.find(service => service.title === activeTab);
+        return data?.services?.find(service => service.title === activeTab);
     }, [activeTab, data?.services]);
 
     const serviceImages = useMemo(() => {
-        return data?.services.map(service => service.image);
+        return data?.services?.map(service => service.image);
     }, [data?.services]);
 
     const handleTabClick = (tabTitle) => {
@@ -61,7 +61,7 @@ function CalismaAlanlari() {
                   flex flex-row md:flex-col  bg-white dark:bg-gray-900 rounded-xl
                   max-md:space-x-3 p-3 md:space-y-3
                  dark:border-white border-black  md:justify-start items-center dark:border-2 md:dark:border-r-2">
-                    {data?.services.map((tab, index) => (
+                    {data?.services?.map((tab, index) => (
                         <button
                             key={index}
                             className={` ${activeTab === tab.title ? 
