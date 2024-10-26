@@ -61,13 +61,27 @@ function SideBar({adminMenu}) {
 
     },
     {
+      title:"publications",
+      icon:<IoDocumentTextSharp />
+    }
+    ,
+    {
       title: "services",
       icon: <MdHomeRepairService />
 
     },
     {
-      title: "texts",
-      icon: <GrTextWrap />
+      title: "posts",
+      icon: <MdCreateNewFolder />
+    },
+    // {
+    //   title: "texts",
+    //   icon: <GrTextWrap />
+
+    // },
+    {
+      title:"galeri",
+      icon:<FaImages />
 
     },
     {
@@ -75,20 +89,9 @@ function SideBar({adminMenu}) {
       icon: <FaPhoneFlip />
     },
 
-    {
-      title: "posts",
-      icon: <MdCreateNewFolder />
-    },
-    {
-      title:"publications",
-      icon:<IoDocumentTextSharp />
-    }
-    ,
-    {
-      title:"galeri",
-      icon:<FaImages />
-
-    },
+    
+   
+   
 
   ];
 

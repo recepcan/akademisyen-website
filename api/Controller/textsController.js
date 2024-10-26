@@ -27,20 +27,24 @@ export const create = async (req, res, next) => {
 
 
 
-export const getTexts=async(req, res, next)=>{
-  try {
-    const texts = await Text.find({
-      ...(req.query.userId && { userId: req.query.userId }),
-     ...(req.query.textId && { _id: req.query.textId }),
-    }) 
-   
-    res.status(200).json({
-       texts
-    });
-} catch (error) {
-    next(error);
-}
-}
+  export const getTexts = async (req, res, next) => {
+    try {
+      // Check if multiple text IDs are provided as a comma-separated string
+      const textIds = req.query.textIds ? req.query.textIds.split(',') : null;
+  
+      const texts = await Text.find({
+        ...(req.query.userId && { userId: req.query.userId }),
+        ...(textIds ? { _id: { $in: textIds } } : req.query.textId && { _id: req.query.textId })
+      });
+  
+      res.status(200).json({
+        texts
+      });
+    } catch (error) {
+      next(error);
+    }
+  };
+  
 
 
 
