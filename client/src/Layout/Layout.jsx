@@ -34,7 +34,7 @@ function Layout() {
     const location = useLocation()
 
   return (
-    <div className=' border-red-600 max-2xl:min-w-full 2xl:w-[1536px]'>
+    <div className=' border-red-600 max-2xl:min-w-full 2xl:w-[96rem]'>
     <Header />
     {
       menu ?
