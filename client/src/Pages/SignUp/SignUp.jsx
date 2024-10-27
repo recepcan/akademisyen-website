@@ -50,46 +50,7 @@ if(res.ok){
 
         </div>
 
-            <div className="md:w-1/2 w-full md:h-[400px] md:p-10 p-3  flex flex-col items-center  lg:justify-center ">
-                <form className='flex  flex-col h-full   md:justify-evenly
-                 w-full md:w-2/3 gap-5  shadow-gray-400 p-5 rounded-lg '
-                  onSubmit={handleSubmit}>
-                   
-                    <div className='space-y-3'>
-                        <div className='text-sm font-bold'>
-                            your username
-                            <input id='username' 
-                            onChange={handleChange}
-                             className='p-3 bg-transparent  border-2 rounded-lg  outline-none w-full' 
-                             type="text" 
-                             placeholder='username' />
-                        </div>
-                        <div 
-                        className='text-sm font-bold'>
-                            your email
-                            <input 
-                            id='email' 
-                            onChange={handleChange} 
-                            className='p-3  border-2 rounded-lg bg-transparent  outline-none w-full'
-                             type="email" 
-                             placeholder='email' />
-                        </div>
-
-                        <div 
-                        className='text-sm font-bold'>
-                            your password
-                            <input 
-                            id='password' 
-                            onChange={handleChange} 
-                            className='p-3  border-2 rounded-lg  bg-transparent outline-none w-full'
-                             type="password" 
-                             placeholder='password' />
-                        </div>
-                    </div>
-                    <button className='bg-gradient-to-br from-green-300 via-teal-500 to-green-900 w-full p-5 rounded-lg  text-white hover:bg-sky-500 transition-all'>SignUp</button>
-              <Oauth/>
-                    </form>
-            </div>
+            
 
         </div>
     )

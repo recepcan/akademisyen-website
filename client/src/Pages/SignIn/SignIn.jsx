@@ -62,19 +62,26 @@ function SignIn() {
               <div className='flex  items-center justify-start'>
                   <h1 className='bg-gradient-to-br from-green-300 via-teal-500 to-green-900 
                    text-white p-5 rounded-2xl text-3xl font-bold font-inter'>
-                  Yunus Altundağ
+                 Recep Can
                  </h1>
               </div>
               <h2 className='p-5  text-lg font-bold font-inter'>
               Bu sayfaya yalnızca site sahibi erişebilir.
                </h2>
+               <Oauth />
 
           </div>
-          <div className="md:w-1/2 w-full md:h-[400px] md:p-10 p-3  flex flex-col items-center  lg:justify-center ">
-              <form onSubmit={handleSubmit} className='flex  flex-col h-full   md:justify-evenly
-               w-full md:w-2/3 gap-5  shadow-gray-400 p-5 rounded-lg  ' >
 
-                  <div className='space-y-3'>
+      </div>
+  )
+}
+
+export default SignIn
+
+{/* 
+    <form onSubmit={handleSubmit} className='flex  flex-col h-full   md:justify-evenly
+               w-full md:w-2/3 gap-5  shadow-gray-400 p-5 rounded-lg  ' >
+    <div className='space-y-3'>
 
                       <div className='text-sm font-bold'>
                           your email
@@ -103,16 +110,6 @@ function SignIn() {
                       {loading ? '...' : 'SignIn '}
                   </button>
 
-                  <Oauth />
-
-                  <Link to='/forgot-password' className='text-blue-600 text-sm'>Forgot Password</Link>
-
-              </form>
-
-          </div>
-
-      </div>
-  )
-}
-
-export default SignIn
+                   <Link to='/forgot-password' className='text-blue-600 text-sm'>Forgot Password</Link>
+ </form>
+    */}
