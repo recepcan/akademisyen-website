@@ -99,8 +99,8 @@ function SideBar({adminMenu}) {
 
   // console.log(currentUser.isAdmin)
   return (
-    <div className='w-full min-h-screen md:border-r-2 md:border-t-2 border-[#374151] overflow-hidden
-         flex  flex-col justify-between bg-transparent   space-y-5  dark:shadow-none  shadow-lg shadow-gray-400'>
+    <div className='w-full h-[90%]  shadow-xl shadow-gray-400 rounded-xl dark:border-2 border-white overflow-hidden  bg-black/20 
+         flex  flex-col justify-between   space-y-5  dark:shadow-none '>
 
 
       <div className='flex flex-col  relative pt-14'>

@@ -31,7 +31,7 @@ function AdminAboutComponent() {
     return (
         <div className='p-5'>
 
-            <div className='border-2 bg-white rounded-xl flex flex-col items-center space-y-5  p-5 relative'>
+            <div className='border-2  rounded-xl flex flex-col items-center space-y-5  p-5 relative'>
 
                 <div className=' p-1  bg-black/30  rounded-2xl w-full md:w-2/3 flex  items-center justify-around'>
                     id: {

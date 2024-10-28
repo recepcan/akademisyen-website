@@ -46,13 +46,13 @@ function AdminPage() {
       }, [location.search]);
     
       return (
-        <div className='min-h-screen flex  justify-center '>
+        <div className='min-h-screen flex  justify-center p-1'>
          
     
         {
          
           <div 
-          className={`${adminMenu? 'lg:w-1/5 max-md:flex-1' : 'w-14 '} transition-all duration-200  border-[#374151]  min-h-screen `}>
+          className={`${adminMenu? 'lg:w-1/5 max-md:flex-1' : 'w-14 '} transition-all duration-200  border-[#374151]  h-[90%] `}>
           <SideBar adminMenu={adminMenu} />
           </div>
         }
