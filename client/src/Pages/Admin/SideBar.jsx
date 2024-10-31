@@ -131,19 +131,7 @@ function SideBar({adminMenu}) {
             </Link>
           ))
         }
-        <button
-        className='  w-full
-               rounded-none p-4 space-x-5     md:hover:bg-sky-900 md:hover:text-white text-gray-900 dark:text-gray-400
-                 flex items-center justify-start text-xl font-extrabold'
-        onClick={() => dispatch(toggleTheme())} >
         
-        {theme === 'dark'
-            ?
-            <BiSolidSun className='text-orange-400 text-2xl' />
-            :
-            <FaMoon className='text-purple-500 text-2xl' />} <h3 className={`${adminMenu? 'visible' : 'hidden'}`}>Theme</h3>
-           
-    </button>
 
       </div>
 
