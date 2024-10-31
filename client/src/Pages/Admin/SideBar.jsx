@@ -99,7 +99,7 @@ function SideBar({adminMenu}) {
 
   // console.log(currentUser.isAdmin)
   return (
-    <div className='w-full h-[90%]  shadow-xl shadow-gray-400 rounded-xl dark:border-2 border-white overflow-hidden  bg-black/20 
+    <div className='w-full h-[90%]   shadow-xl shadow-gray-400 rounded-xl dark:border-2 border-white overflow-hidden  bg-black/20 
          flex  flex-col justify-between   space-y-5  dark:shadow-none '>
 
 
@@ -119,13 +119,14 @@ function SideBar({adminMenu}) {
           tabs.map((item, index) => (
             <Link
              key={index} 
-             className={`${tab === item.title && 'dark:text-white  bg-sky-700 dark:bg-sky-500 text-white  font-extrabold'} w-full
+             className={`${tab === item.title && 'dark:text-white  bg-sky-700 dark:bg-sky-500 text-white  font-extrabold'}
+               w-full
                rounded-none p-4 space-x-5  shadow-sm   md:hover:bg-sky-900 md:hover:text-white text-gray-900 dark:text-gray-400
-                 flex items-center justify-start  text-xl font-extrabold`}
+                 flex items-center  justify-start    text-xl font-extrabold`}
               to={`/admin?tab=${item.title}`}>
               <div className='text-2xl'>{item.icon}</div>
              { 
-              <div className={`${adminMenu? 'visible' : 'hidden'}`}>{item.title}</div>
+              <h1 className={`${adminMenu? 'visible' : 'hidden'}`}>{item.title}</h1>
             }
             </Link>
           ))
@@ -154,7 +155,7 @@ function SideBar({adminMenu}) {
         }
         <Link to={'/'} className='  '>
           <h6 className={`flex ${adminMenu? 'text-md':'hidden'} `}>
-          {currentUser?.email}
+         @{currentUser?.email.split("@")[0]}
           </h6>
         </Link>
       {/* <Link  to={`/admin?tab=profile`}>

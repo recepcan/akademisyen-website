@@ -151,6 +151,14 @@ const navigate=useNavigate()
  
  
          </div>
+         {
+          formData.image && (
+              <div className='w-full h-80 flex items-center justify-center bg-sky-100'>
+              <img src={formData.image} alt='upload' 
+              className='w-full h-52 lg:h-72 object-cover'/>
+        
+              </div>  )
+      }
         <ReactQuill value={formData.content}
          theme='snow' 
          placeholder='write on the line' 
