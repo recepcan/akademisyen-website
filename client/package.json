@@ -13,6 +13,7 @@
   "dependencies": {
     "@fontsource/titillium-web": "^5.1.0",
     "@reduxjs/toolkit": "^2.2.7",
+    "axios": "^1.7.7",
     "firebase": "^10.13.1",
     "flowbite-react": "^0.10.1",
     "framer-motion": "^11.5.4",

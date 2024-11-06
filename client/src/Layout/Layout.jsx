@@ -28,6 +28,7 @@ import PostPage from '../Pages/PostPage/PostPage'
 import AddService from '../Pages/Admin/AddService'
 import UpdateService from '../Pages/Admin/UpdateService'
 import AddImage from '../Pages/Admin/AddImage'
+import Uploadimage from '../Components/Uploadimage'
 function Layout() {
 
     const { menu } = useSelector(state => state.header)
@@ -41,6 +42,7 @@ function Layout() {
         <ToggleMenu />
         :
         <Routes>
+        <Route path='/upload-image' element={<Uploadimage/> }/>
           <Route path='/giris-yap' element={<SignIn />} />
           <Route path='/kayit-ol' element={<SignUp />} />
           <Route path='/hakkinda' element={<Hakkinda />} />

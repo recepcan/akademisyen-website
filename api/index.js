@@ -11,6 +11,7 @@ import publicationRoutes from './Routes/publicationRoutes.js'
 import servicesRoutes from './Routes/servicesRoutes.js'
 import contactRoutes from './Routes/contactRoutes.js'
 import galeriRoutes from './Routes/galeriRoutes.js'
+import imageRoutes from './Routes/imageRoutes.js'
 import path from 'path'
 
 const app =express();
@@ -27,13 +28,13 @@ console.log("mongodb connected")
 
 app.use(express.json())
 app.use(cookieParser())
-
+const __dirname = path.resolve();
 
 app.use(cors({
     origin: 'http://localhost:5173', // Frontend'in çalıştığı port
     credentials: true, // Eğer yetkilendirme cookies kullanıyorsanız
   }));
-  
+
 app.use('/api/auth', authRoutes)
 app.use('/api/post', postsRoutes)
 app.use('/api/text', textsRoutes)
@@ -42,8 +43,9 @@ app.use('/api/publication',publicationRoutes)
 app.use('/api/service',servicesRoutes)
 app.use('/api/contact',contactRoutes)
 app.use('/api/image',galeriRoutes)
+app.use('/api/images', imageRoutes); // Resim yükleme route
 
-const __dirname = path.resolve();
+
 
 
 app.use(express.static(path.join(__dirname, '/client/dist')));
