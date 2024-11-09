@@ -3,10 +3,10 @@ import Images from '../Models/imageModel.js';
 import path from 'path';
 
 const __dirname = path.resolve();
-
+console.log(__dirname)
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, path.join(__dirname, '../../client/public/images')); // Doğru dizini kontrol edin
+    cb(null, path.join(__dirname, '/client/public/images')); // Doğru dizini kontrol edin
   },
   filename: function (req, file, cb) {
     const uniqueSuffix = Date.now();
@@ -23,7 +23,7 @@ export const create = [
       return res.status(400).json({ status: "error", message: "No file uploaded" });
     }
 
-    const imageName = req.file.filename;
+    const imageName = req.file.filename; 
 
     try {
       await Images.create({ image: imageName });

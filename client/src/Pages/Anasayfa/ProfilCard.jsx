@@ -37,7 +37,7 @@ function ProfilCard() {
 
 
   return (
-    <div className='lg:w-3/4 w-full md:min-h-[500px]   rounded-xl dark:border 
+    <div className='lg:w-3/4 w-full md:min-h-[500px] dark:bg-[#030712]  rounded-xl dark:border 
     flex md:flex-row flex-col dark:shadow-none shadow-xl shadow-gray-400 
     '>
     

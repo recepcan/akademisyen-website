@@ -12,7 +12,7 @@ function UploadImage() {
     e.preventDefault();
   
     const formData = new FormData();
-    formData.append("image", image);
+    formData.append("file", image);
   
     try {
       const response = await fetch("/api/images/upload-image", { // Önüne `/` eklemeyi unutmayın
@@ -38,7 +38,7 @@ function UploadImage() {
 
   const getImages = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/images/get");
+      const response = await fetch("/api/images/get");
       if (!response.ok) {
         throw new Error("Error fetching images");
       }
@@ -57,7 +57,7 @@ function UploadImage() {
         <button type="submit">Upload Image</button>
       </form>
       {allImages.length > 0 && allImages.map((data) => (
-        <img key={data._id} src={`http://localhost:5000/uploads/${data.image}`} alt="Uploaded" height={100} width={100} />
+        <img key={data._id} src={`${data.image}`} alt="Uploaded" height={100} width={100} />
       ))}
     </div>
   );
