@@ -19,12 +19,12 @@ function ImageSlider({ images }) {
     >
       {images.map((image, index) => (
         <SwiperSlide key={index}>
-          <div className="w-full h-full rounded-xl">
+          <div className="w-full h-full rounded-xl bg-black/30 dark:bg-white/10">
             <img
             loading='lazy'
               src={image.image}
               alt={`Slide ${index}`}
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-contain rounded-xl"
             />
           </div>
         </SwiperSlide>

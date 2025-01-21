@@ -43,16 +43,16 @@ function Galeri() {
 
 </div>
 
-<div className='w-full flex flex-wrap items-center justify-between  gap-5 '>
+<div className='w-full grid grid-cols-2  sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 flex-wrap items-center justify-items-center  gap-5 '>
 {
   data?.images.map((image,index)=>(
 <div key={index}
- className='max-w-[500px] max-sm:w-full sm:h-[300px] overflow-hidden'>
+ className=' max-sm:w-full sm:h-[300px] overflow-hidden '>
 <img 
 loading='lazy'
 src={image.image} 
 alt=""
- className='max-w-[500px] max-sm:w-full sm:h-[300px] rounded-xl '/>
+ className='w-[200px] object-cover max-sm:w-full h-[300px] rounded-xl '/>
 </div>
   ))
 }
