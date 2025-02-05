@@ -46,24 +46,26 @@ function AdminPage() {
       }, [location.search]);
     
       return (
-        <div className='min-h-screen flex  justify-center p-1'>
+        <div className='min-h-screen flex flex-col  items-center '>
          
     
         {
          
           <div 
-          className={`${adminMenu? 'lg:w-1/5 max-md:flex-1' : 'w-14 '} transition-all duration-200  border-[#374151]  h-[90%] `}>
+          className={`${adminMenu? '' : ' '} w-full h-16  transition-all duration-200   border-gray-800 `}>
           <SideBar adminMenu={adminMenu} />
           </div>
         }
     
     
-          <div className={`md:flex-1 ${adminMenu && "max-md:hidden" } w-full 
+          <div className={` w-full flex flex-col 
             min-h-full box-border p-2 max-h-screen overflow-y-auto   border-black`} >
           
-          <div className='w-full  uppercase flex items-center justify-around  p-3 text-2xl  
+          <div 
+          className='w-full  uppercase flex items-center justify-around  p-3 text-2xl  
            rounded-sm mb-5 '>
           <h1>Edit {tab} Page</h1>
+
           {
             tab==="posts" && 
             <Link to={'/create-post'} className=' flex flex-col'>
@@ -116,17 +118,20 @@ function AdminPage() {
           }
 
           </div>
+      <div className='w-full'>
       
-           {tab==='about' && (<AdminAboutComponent/>) } 
-           {tab==='contact' &&  (<AdminContactComponent/>)} 
-           {tab==='home' &&  (<AdminHomeComponent/>)}
-           {tab==='' &&  (<AdminHomeComponent/>)} 
-           {tab==='services' &&  (<AdminServicesCompopnent/>)} 
-          {tab==='posts' &&  (<AdminPostsComponent />)} 
-          {tab===`texts` &&  (<AdminTextsComponent />)} 
-          {tab===`profile` &&  (<Profile />)} 
-          {tab===`publications` &&  (<AdminPublicationsComponent />)} 
-          {tab===`galeri` &&  (<AdminGaleriComponent />)} 
+      {tab==='about' && (<AdminAboutComponent/>) } 
+      {tab==='contact' &&  (<AdminContactComponent/>)} 
+      {tab==='home' &&  (<AdminHomeComponent/>)}
+      {tab==='' &&  (<AdminHomeComponent/>)} 
+      {tab==='services' &&  (<AdminServicesCompopnent/>)} 
+     {tab==='posts' &&  (<AdminPostsComponent />)} 
+     {tab===`texts` &&  (<AdminTextsComponent />)} 
+     {tab===`profile` &&  (<Profile />)} 
+     {tab===`publications` &&  (<AdminPublicationsComponent />)} 
+     {tab===`galeri` &&  (<AdminGaleriComponent />)} 
+      
+      </div>
           </div>
         </div>
       )

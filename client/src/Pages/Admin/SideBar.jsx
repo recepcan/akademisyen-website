@@ -9,8 +9,8 @@ import { FcAbout } from "react-icons/fc";
 import { MdContentPaste, MdCreateNewFolder, MdHomeRepairService } from "react-icons/md";
 import { PiPhoneDisconnectThin } from "react-icons/pi";
 import { IoCloseSharp, IoDocumentText, IoDocumentTextSharp } from "react-icons/io5";
-import { FaImages, FaPhoneFlip } from 'react-icons/fa6';
-import { FaInfoCircle, FaMoon } from 'react-icons/fa';
+import { FaImages, FaPhoneFlip, FaPlus } from 'react-icons/fa6';
+import { FaInfoCircle, FaMoon, FaSignOutAlt } from 'react-icons/fa';
 import { BiSolidSun } from 'react-icons/bi';
 import {toggleTheme} from '../../redux/headerEventsSlice'
 import { BsPersonCircle } from "react-icons/bs";
@@ -99,59 +99,58 @@ function SideBar({adminMenu}) {
 
   // console.log(currentUser.isAdmin)
   return (
-    <div className='w-full h-[90%]   shadow-xl shadow-gray-400 rounded-xl dark:border-2 border-white overflow-hidden  bg-black/20 
-         flex  flex-col justify-between   space-y-5  dark:shadow-none '>
+    <div className='w-full h-16 px-5   border-y border-gray-500 transition-all duration-300  flex justify-between space-x-2 dark:shadow-none'>
 
+    {/* Navbar Sol Tarafı */}
+    <div className='flex space-x-2 items-center relative'>
+      {tabs.map((item, index) => (
+        <div 
+          key={index} 
+          className="relative"
+        >
+          <Link
+            className={`${tab === item.title ? 'dark:text-white bg-sky-700 dark:bg-sky-500 text-white font-extrabold' : ''}
+              h-12 border border-gray-500 rounded-lg p-2 space-x-2 shadow-sm md:hover:bg-sky-900 md:hover:text-white
+              flex items-center justify-start text-lg font-extrabold`}
+            to={item.to? `/${item.to}` : `/panel?tab=${item.title}`}
+          >
+            <div className={`text-xl `}>{item.icon}</div>
+            <h1 className={`max-lg:hidden text-sm`}>{item.title}</h1>
+          </Link>
 
-      <div className='flex flex-col  relative pt-14'>
-      <div
-      onClick={()=>dispatch(setadminMenu())} 
-      className='   cursor-pointer flex  items-center justify-center rounded-lg text-4xl w-10 h-10 absolute top-2 right-2 '>
-      {
-        adminMenu  ? 
-       <IoCloseSharp />
-       :
-       <AiOutlineMenu/>
-      }
-      </div>
-
-        {
-          tabs.map((item, index) => (
-            <Link
-             key={index} 
-             className={`${tab === item.title && 'dark:text-white  bg-sky-700 dark:bg-sky-500 text-white  font-extrabold'}
-               w-full
-               rounded-none p-4 space-x-5  shadow-sm   md:hover:bg-sky-900 md:hover:text-white text-gray-900 dark:text-gray-400
-                 flex items-center  justify-start    text-xl font-extrabold`}
-              to={`/admin?tab=${item.title}`}>
-              <div className='text-2xl'>{item.icon}</div>
-             { 
-              <h1 className={`${adminMenu? 'visible' : 'hidden'}`}>{item.title}</h1>
-            }
-            </Link>
-          ))
-        }
-        
-
-      </div>
-
-      <div className={`flex ${adminMenu? 'flex-row':'flex-col space-y-3'} items-center justify-between text-gray-900 dark:text-gray-400   p-2 `}>
-        {location.pathname == '/admin' &&
-          <button onClick={handleSignout} className='  text-white  bg-red-500  font-semibold p-1 rounded-full'>
-            <AiFillLeftCircle className='text-3xl ' />
-          </button>
-        }
-        <Link to={'/'} className='  '>
-          <h6 className={`flex ${adminMenu? 'text-md':'hidden'} `}>
-         @{currentUser?.email.split("@")[0]}
-          </h6>
-        </Link>
-      {/* <Link  to={`/admin?tab=profile`}>
-       <img src={currentUser?.profilePicture} className='w-8 h-8 object-cover rounded-full ' />
-       </Link> */}
-      </div>
-
+          {/* Dropdown Menü */}
+          {item.submenu && openDropdown === item.title && (
+            <div className="absolute left-0 max-sm:hidden top-full  z-40 bg-white dark:bg-gray-800 border rounded-lg shadow-lg w-48">
+              {item.submenu.map((subItem, subIndex) => (
+                <Link
+                  key={subIndex}
+                  to={subItem.link}
+                  className="block px-4 py-3 rounded-lg text-gray-700 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+                >
+                  {subItem.title}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
     </div>
+
+    {/* Navbar Sağ Tarafı */}
+    <div className="flex-1 flex flex-row justify-end space-x-2 items-center    p-2">
+    
+  
+    {location.pathname === '/panel' &&
+        <button 
+        onClick={handleSignout} 
+        className='hover:bg-red-600 h-12 border font-semibold p-2 rounded-lg border-gray-500'>
+          <FaSignOutAlt />
+        </button>
+      }
+      
+    </div>
+
+  </div>
   )
 }
 export default SideBar

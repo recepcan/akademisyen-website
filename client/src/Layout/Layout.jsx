@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import ToggleMenu from '../Components/ToggleMenu'
 import Footer from '../Components/Footer'
 import AdminPage from '../Pages/Admin/AdminPage'
@@ -9,13 +9,13 @@ import CreateText from '../Pages/Admin/CreateText'
 import PrivateRoute from '../Components/PrivateRoute'
 import SignIn from '../Pages/SignIn/SignIn'
 import SignUp from '../Pages/SignUp/SignUp'
-import Hakkinda from '../Pages/Hakkinda/Hakkinda'
-import CalismaAlanlari from '../Pages/CalismaAlanlari/CalismaAlanlari'
-import Blog from '../Pages/Blog/Blog'
-import Iletisim from '../Pages/Iletisim/Iletisim'
-import Anasayfa from '../Pages/Anasayfa/Anasayfa'
-import Galeri from '../Pages/Galeri/Galeri'
-import Akademik from '../Pages/Akademik/Akademik'
+// import Hakkinda from 
+// import CalismaAlanlari from '../Pages/CalismaAlanlari/CalismaAlanlari'
+// import Blog from '../Pages/Blog/Blog'
+// import Iletisim from '../Pages/Iletisim/Iletisim'
+// import Anasayfa from '../Pages/Anasayfa/Anasayfa'
+// import Galeri from '../Pages/Galeri/Galeri'
+// import Akademik from '../Pages/Akademik/Akademik'
 import Header from '../Components/Header'
 import { Navbar } from 'flowbite-react'
 import { useState } from 'react'
@@ -29,7 +29,15 @@ import AddService from '../Pages/Admin/AddService'
 import UpdateService from '../Pages/Admin/UpdateService'
 import AddImage from '../Pages/Admin/AddImage'
 import Uploadimage from '../Components/Uploadimage'
+import Loading from '../Components/Loading'
 function Layout() {
+  const Anasayfa = lazy(() => import("../Pages/Anasayfa/Anasayfa"));
+  const Hakkinda = lazy(() => import('../Pages/Hakkinda/Hakkinda'));
+  const CalismaAlanlari = lazy(() => import("../Pages/CalismaAlanlari/CalismaAlanlari"));
+  const Blog = lazy(() => import("../Pages/Blog/Blog"));
+  const Akademik = lazy(() => import("../Pages/Akademik/Akademik"));
+  const Iletisim = lazy(() => import("../Pages/Iletisim/Iletisim"));
+  const Galeri = lazy(() => import("../Pages/Galeri/Galeri"));
 
     const { menu } = useSelector(state => state.header)
     const location = useLocation()
@@ -40,7 +48,8 @@ function Layout() {
     {
       menu ?
         <ToggleMenu />
-        :
+        : 
+        <Suspense fallback={<Loading/>}>
         <Routes>
         <Route path='/upload-image' element={<Uploadimage/> }/>
           <Route path='/giris-yap' element={<SignIn />} />
@@ -55,7 +64,7 @@ function Layout() {
           <Route path='/post/:postSlug' element={<PostPage />} />
 
           <Route element={<PrivateRoute />}>
-            <Route path='/admin' element={<AdminPage />} />
+            <Route path='/panel' element={<AdminPage />} />
 
             <Route path='/create-post' element={<CreatePost />} />
             <Route path='/update-post/:postId' element={<UpdatePost />} />
@@ -75,7 +84,8 @@ function Layout() {
 
           <Route path='/' element={<Anasayfa />} />
 
-        </Routes>}
+        </Routes>
+        </Suspense>}
     {
       location.pathname !== '/admin' && location.pathname !== '/giris-yap' && location.pathname !== '/kayit-ol' && <Footer />
     }
