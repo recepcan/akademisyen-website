@@ -29,7 +29,7 @@ function Oauth() {
             if (res.ok){
                 dispatch(signInSuccess(data))
                 toast.success(data)
-                navigate('/admin')
+                navigate('/panel')
             }
         } catch (error) {
             toast.error(error);

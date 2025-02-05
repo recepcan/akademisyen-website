@@ -74,9 +74,9 @@ function Header() {
       icon: null,
     },
     {
-      id:"admin",
-      name:"admin",
-      to:"/admin",
+      id:"panel",
+      name:"panel",
+      to:"/panel",
     }
   ];
 

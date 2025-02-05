@@ -39,7 +39,7 @@ function SignIn() {
           if (res.ok) {
 
               dispatch(signInSuccess(data))
-              navigate('/admin')
+              navigate('/panel')
               toast.success('Hoşgeldiniz')
           }
       } catch (error) {
