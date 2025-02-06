@@ -66,9 +66,9 @@ function ToggleMenu() {
 
         },
         {
-            id: 'admin',
-            name: 'admin',
-            to: '/admin',
+            id: 'panel',
+            name: 'panel',
+            to: '/panel',
             icon: null
 
 

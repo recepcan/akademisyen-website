@@ -22,6 +22,7 @@ import AdminGaleriComponent from './AdminGaleriComponent';
 import AdminHomeComponent from './AdminHomeComponent';
 import AdminContactComponent from './AdminContactComponent';
 import AdminAboutComponent from './AdminAboutComponent';
+import Dialog from '../../Components/Dialog';
 
 
 
@@ -130,6 +131,7 @@ function AdminPage() {
      {tab===`profile` &&  (<Profile />)} 
      {tab===`publications` &&  (<AdminPublicationsComponent />)} 
      {tab===`galeri` &&  (<AdminGaleriComponent />)} 
+     {tab===`dialog` &&  (<Dialog />)} 
       
       </div>
           </div>
