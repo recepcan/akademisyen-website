@@ -32,12 +32,10 @@ function AdminContactComponent() {
 
             <div className='border-2  rounded-xl flex flex-col items-center space-y-5  p-5 relative'>
 
-                <div className=' p-1  bg-black/30  rounded-2xl w-full md:w-2/3 flex  items-center justify-around'>
-                    id: {
-                        text?._id
-                    }
+                <div className=' p-1  bg-black/30 dark:border rounded-2xl w-full md:w-2/3 flex  items-center justify-around'>
+                    
                     <h1>
-                        title: {
+                        {
                             text?.title
                         }</h1>
                     

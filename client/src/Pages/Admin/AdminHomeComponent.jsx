@@ -37,9 +37,14 @@ useEffect(() => {
     {texts?.map((item,index)=>(
       <div key={index} className='border-2 p-2 rounded-xl dark:border-white border-black flex flex-col items-center justify-center text-center'>
      
-      <h1>{
-        item.title
-      }</h1>
+      <div className=' p-1  bg-black/30 dark:border  rounded-2xl w-full md:w-2/3 flex  items-center justify-around'>
+                    
+      <h1>
+          {
+            item?.title
+          }</h1>
+      
+  </div>
 
       <div
                     className="flex flex-col  text-center  w-full  leading-6 tracking-wider  post-content"

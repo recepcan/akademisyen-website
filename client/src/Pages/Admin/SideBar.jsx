@@ -99,10 +99,10 @@ function SideBar({adminMenu}) {
 
   // console.log(currentUser.isAdmin)
   return (
-    <div className='w-full h-16 px-5   border-y border-gray-500 transition-all duration-300  flex justify-between space-x-2 dark:shadow-none'>
+    <div className='w-full h-16 sm:px-5 px-2   border-y border-gray-500 transition-all duration-300  flex justify-between space-x-2 dark:shadow-none'>
 
     {/* Navbar Sol Tarafı */}
-    <div className='flex space-x-2 items-center relative'>
+    <div className='flex space-x-1 items-center relative'>
       {tabs.map((item, index) => (
         <div 
           key={index} 
@@ -137,7 +137,7 @@ function SideBar({adminMenu}) {
     </div>
 
     {/* Navbar Sağ Tarafı */}
-    <div className="flex-1 flex flex-row justify-end space-x-2 items-center    p-2">
+    <div className="flex-1 flex flex-row justify-end   items-center ">
     
   
     {location.pathname === '/panel' &&
