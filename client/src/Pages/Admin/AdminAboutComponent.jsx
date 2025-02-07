@@ -29,7 +29,7 @@ function AdminAboutComponent() {
         fetchText();
     }, [dispatch, textId]);
     return (
-        <div className='p-5'>
+        <div className='p-5  '>
 
             <div className='border-2  rounded-xl flex flex-col items-center space-y-5  p-5 relative'>
 
@@ -50,7 +50,7 @@ function AdminAboutComponent() {
                     className='md:max-w-xs w-full object-contain rounded-xl' src={text?.image} alt="" />
                 }
                 <div
-                    className="flex flex-col  text-center  w-full  leading-6 tracking-wider  post-content"
+                    className="flex  flex-col  text-center  w-full  leading-6 tracking-wider  post-content"
                     dangerouslySetInnerHTML={{ __html: text && text.content }} />
 
                </div>

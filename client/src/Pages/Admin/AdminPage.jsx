@@ -47,7 +47,7 @@ function AdminPage() {
       }, [location.search]);
     
       return (
-        <div className='min-h-screen flex flex-col  items-center '>
+        <div className='border-lime-500 flex-1 flex-col overflow-auto  items-center '>
          
     
         {
@@ -60,7 +60,7 @@ function AdminPage() {
     
     
           <div className={` w-full flex flex-col 
-            min-h-full box-border p-2 max-h-screen overflow-y-auto   border-black`} >
+             box-border p-2 max-h-screen    border-black`} >
           
           <div 
           className='w-full  uppercase flex items-center justify-around  p-3 text-2xl  
@@ -119,7 +119,7 @@ function AdminPage() {
           }
 
           </div>
-      <div className='w-full'>
+      <div className='w-full min-h-screen  border-red-600'>
       
       {tab==='about' && (<AdminAboutComponent/>) } 
       {tab==='contact' &&  (<AdminContactComponent/>)} 

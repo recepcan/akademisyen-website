@@ -87,7 +87,7 @@ function Layout() {
         </Routes>
         </Suspense>}
     {
-      location.pathname !== '/admin' && location.pathname !== '/giris-yap' && location.pathname !== '/kayit-ol' && <Footer />
+      location.pathname !== '/panel' && location.pathname !== '/giris-yap' && location.pathname !== '/kayit-ol' && <Footer />
     }
     </div>
   )
